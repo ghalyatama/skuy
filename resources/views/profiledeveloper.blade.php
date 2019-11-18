@@ -35,6 +35,15 @@
                 <div class="top-right links">
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 
@@ -91,12 +100,24 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>Your Name</label>
+                                                <p class="text-primary"> {{$users->name}} </p>
                                             </div>
                                             <div class="form-group">
                                                 <label>Position <small>(developer/investor)</small></label>
+                                                <p class="text-primary"> Developer </p>
                                             </div>
                                             <div class="form-group">
                                                 <label>Your Email</label>
+                                                <p class="text-primary"> {{$users->email}} </p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Alamat</label>
+                                                <p class="text-primary"> {{$users->alamat}}   
+                                                </p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Kontak</label>
+                                                <p class="text-primary"> {{$users->kontak}} </p>
                                             </div>
                                         </div>
                                         <!-- <div class="col-sm-10 col-sm-offset-1"> -->

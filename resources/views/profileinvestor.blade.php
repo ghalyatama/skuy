@@ -89,13 +89,28 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label>Your Name</label>
+                                                <label>Perusahaan:</label>
+                                                <p class="text-primary"> {{$users->perusahaan}} </p>
                                             </div>
                                             <div class="form-group">
-                                                <label>Position <small>(developer/investor)</small></label>
+                                                <label>Nama         :</label>
+                                                <p class="text-primary"> {{$users->name}} </p>
                                             </div>
                                             <div class="form-group">
-                                                <label>Your Email</label>
+                                                <label>Posisi       :<small>(developer/investor)</small></label>
+                                                <p class="text-primary"> {{$users->posisi}} </p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Email        :</label>
+                                                <p class="text-primary"> {{$users->email}} </p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Alamat       :</label>
+                                                <p class="text-primary"> {{$users->alamat}} </p>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Kontak       :</label>
+                                                <p class="text-primary"> {{$users->kontak}} </p>
                                             </div>
                                         </div>
                                         <!-- <div class="col-sm-10 col-sm-offset-1"> -->
@@ -106,14 +121,11 @@
                                 </div>
                                 <div class="wizard-footer height-wizard">
                                     <div class="pull-right">
-                                        <input type='button' class='btn btn-next btn-fill btn-warning btn-wd btn-sm' name='next' value='Next' />
-                                        <input type='button' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='finish' value='Finish' />
+                                        
+                                        <input type='button' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='edit profile' value='Edit Profile' />
 
                                     </div>
 
-                                    <div class="pull-left">
-                                        <input type='button' class='btn btn-previous btn-fill btn-default btn-wd btn-sm' name='previous' value='Previous' />
-                                    </div>
                                     <div class="clearfix"></div>
                                 </div>
 
