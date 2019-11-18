@@ -2650,7 +2650,7 @@ fieldset[disabled] .btn-link.active {
 }
 
 .form-control {
-  background-color: transparent;
+  background-color: #0000;
   border: 1px solid #E3E3E3;
   border-radius: 30px;
   color: #2c2c2c;
@@ -6317,11 +6317,11 @@ img {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-[data-background-color]:not([data-background-color="gray"]) .checkbox label::before,
-[data-background-color]:not([data-background-color="gray"]) .checkbox label::after,
-[data-background-color]:not([data-background-color="gray"]) .radio label::before,
-[data-background-color]:not([data-background-color="gray"]) .radio label::after {
-  border-color: rgba(255, 255, 255, 0.2);
+[data-background-color]:not([data-background-color="black"]) .checkbox label::before,
+[data-background-color]:not([data-background-color="black"]) .checkbox label::after,
+[data-background-color]:not([data-background-color="black"]) .radio label::before,
+[data-background-color]:not([data-background-color="black"]) .radio label::after {
+  border-color: #000000;
 }
 
 [data-background-color]:not([data-background-color="gray"]) .checkbox label::after,

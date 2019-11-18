@@ -9,7 +9,7 @@
             
                 
                 <div class="card-header text-center">
-                  <h3 class="card-title title-up">Sign Up</h3>
+                  <h3 class="card-title title-up"><b>Sign Up</b></h3>
                   <div class="social-line">
                     <a href="#pablo" class="btn btn-neutral btn-facebook btn-icon btn-round">
                       <i class="fab fa-facebook-square"></i>
@@ -28,13 +28,20 @@
                         @csrf
 
                         <div class="input-group no-border">
+                            <!-- <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label> -->
                             <div class="input-group-prepend">
                                 <span class="input-group-text">
-                                <i class="now-ui-icons users_circle-08"></i>
+                                    <i class="now-ui-icons ui-2_favourite-28"></i>
                                 </span>
                             </div>
-                            <input type="text" class="form-control" placeholder="First Name...">
+
+                            <select id="inputState" class="form-control">
+                               <option selected>Choose...</option>
+                                     <option style="color: black;" >Developer</option>
+                                     <option style="color: black;" >Investor</option>
+                            </select>
                         </div>
+
                         <div class="input-group no-border">
                             <!-- <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label> -->
                             <div class="input-group-prepend">

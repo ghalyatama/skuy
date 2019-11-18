@@ -50,7 +50,7 @@
             </div>
 
             <div class="navbar-translate">
-                <a class="navbar-brand" href="https://demos.creative-tim.com/now-ui-kit/index.html" rel="tooltip" title="Designed by Invision. Coded by Creative Tim" data-placement="bottom" target="_blank">
+                <a class="navbar-brand" href="#" rel="tooltip" title="Designed by Invision. Coded by Creative Tim" data-placement="bottom" target="_blank">
                 IDENATION
                 </a>
                 <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -109,13 +109,18 @@
                 <div class="container">
                     <div class="content-center brand">
                         <img class="n-logo" src="./assets/img/now-logo.png" alt="">
-                            <h1 class="h1-seo">Now UI Kit.</h1>
-                                <h3>A beautiful Bootstrap 4 UI kit. Yours free.</h3>
+                            <h1 class="h1-seo">IDENATION</h1>
+                                <h3>now you can realize your dreams.</h3>
                     </div>
                 </div>
             </div>
 
-            <div class="section section-about-us">
+            <div class="container">
+                <div class="row">
+                
+                </div>
+            </div>
+            <!-- <div class="section section-about-us">
             <div class="container">
                 <div class="row">
                 <div class="col-md-8 ml-auto mr-auto text-center">
@@ -128,19 +133,25 @@
                 <div class="row">
                     <div class="col-md-6">
                     <div class="image-container image-left" style="background-image: url('img/login.jpg')">
+                     -->
                         <!-- First image on the left side -->
-                        <p class="blockquote blockquote-primary">"Over the span of the satellite record, Arctic sea ice has been declining significantly, while sea ice in the Antarctichas increased very slightly"
+                    
+                        <!-- <p class="blockquote blockquote-primary">"Over the span of the satellite record, Arctic sea ice has been declining significantly, while sea ice in the Antarctichas increased very slightly"
                         <br>
                         <br>
                         <small>-NOAA</small>
                         </p>
-                    </div>
+                    </div> -->
+                    
                     <!-- Second image on the left side of the article -->
-                    <div class="image-container" style="background-image: url('img/bg3.jpg')"></div>
+                    
+                    <!-- <div class="image-container" style="background-image: url('img/bg3.jpg')"></div>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-5"> -->
+                    
                     <!-- First image on the right side, above the article -->
-                    <div class="image-container image-right" style="background-image: url('img/bg1.jpg')"></div>
+                    
+                    <!-- <div class="image-container image-right" style="background-image: url('img/bg1.jpg')"></div>
                     <h3>So what does the new record for the lowest level of winter ice actually mean</h3>
                     <p>The Arctic Ocean freezes every winter and much of the sea-ice then thaws every summer, and that process will continue whatever happens with climate change. Even if the Arctic continues to be one of the fastest-warming regions of the world, it will always be plunged into bitterly cold polar dark every winter. And year-by-year, for all kinds of natural reasons, there’s huge variety of the state of the ice.
                     </p>
@@ -153,7 +164,9 @@
                 </div>
                 </div>
             </div>
-            </div>
+            </div> -->
+
+            
             <div class="section section-team text-center">
             <div class="container">
                 <h2 class="title">Here is our team</h2>
@@ -161,9 +174,9 @@
                 <div class="row">
                     <div class="col-md-4">
                     <div class="team-player">
-                        <img src="img/avatar.jpg" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
-                        <h4 class="title">Romina Hadid</h4>
-                        <p class="category text-primary">Model</p>
+                        <img src="" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
+                        <h4 class="title">Risa Intan</h4>
+                        <p class="category text-primary">Project Manager</p>
                         <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
                         <a href="#">links</a> for people to be able to follow them outside the site.</p>
                         <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-twitter"></i></a>
@@ -173,9 +186,9 @@
                     </div>
                     <div class="col-md-4">
                     <div class="team-player">
-                        <img src="img/ryan.jpg" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
-                        <h4 class="title">Ryan Tompson</h4>
-                        <p class="category text-primary">Designer</p>
+                        <img src="" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
+                        <h4 class="title">Ghalyatama Ikram Fauzi</h4>
+                        <p class="category text-primary">Designer and Frontend</p>
                         <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
                         <a href="#">links</a> for people to be able to follow them outside the site.</p>
                         <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-twitter"></i></a>
@@ -184,47 +197,15 @@
                     </div>
                     <div class="col-md-4">
                     <div class="team-player">
-                        <img src="img/eva.jpg" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
-                        <h4 class="title">Eva Jenner</h4>
-                        <p class="category text-primary">Fashion</p>
+                        <img src="" alt="Thumbnail Image" class="rounded-circle img-fluid img-raised">
+                        <h4 class="title">Ja'far Shadiq Alatas</h4>
+                        <p class="category text-primary">Backend and Business Analyst</p>
                         <p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
                         <a href="#">links</a> for people to be able to follow them outside the site.</p>
                         <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-google-plus"></i></a>
                         <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-youtube"></i></a>
                         <a href="#pablo" class="btn btn-primary btn-icon btn-round"><i class="fab fa-twitter"></i></a>
                     </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-            </div>
-            <div class="section section-contact-us text-center">
-            <div class="container">
-                <h2 class="title">Want to work with us?</h2>
-                <p class="description">Your project is very important to us.</p>
-                <div class="row">
-                <div class="col-lg-6 text-center col-md-8 ml-auto mr-auto">
-                    <div class="input-group input-lg">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">
-                        <i class="now-ui-icons users_circle-08"></i>
-                        </span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="First Name...">
-                    </div>
-                    <div class="input-group input-lg">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">
-                        <i class="now-ui-icons ui-1_email-85"></i>
-                        </span>
-                    </div>
-                    <input type="text" class="form-control" placeholder="Email...">
-                    </div>
-                    <div class="textarea-container">
-                    <textarea class="form-control" name="name" rows="4" cols="80" placeholder="Type a message..."></textarea>
-                    </div>
-                    <div class="send-button">
-                    <a href="#pablo" class="btn btn-primary btn-round btn-block btn-lg">Send Message</a>
                     </div>
                 </div>
                 </div>
