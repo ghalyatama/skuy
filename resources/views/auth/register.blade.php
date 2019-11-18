@@ -35,10 +35,10 @@
                                 </span>
                             </div>
 
-                            <select id="inputState" class="form-control">
-                               <option selected>Choose...</option>
-                                     <option style="color: black;" >Developer</option>
-                                     <option style="color: black;" >Investor</option>
+                            <select name="status" class="form-control">
+                               <option value="" selected>Choose...</option>
+                                     <option value="1" style="color: black;" >Developer</option>
+                                     <option value="2"style="color: black;" >Investor</option>
                             </select>
                         </div>
 
