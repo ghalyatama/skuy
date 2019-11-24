@@ -28,6 +28,10 @@ Route::get('/booking', function () {
     return view('bookinglist');
 });
 
+Route::get('/createide', function () {
+    return view('createide');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

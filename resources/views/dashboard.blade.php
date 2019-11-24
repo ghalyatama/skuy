@@ -71,12 +71,6 @@ The above copyright notice and this permission notice shall be included in all c
               <p>Booking List</p>
             </a>
           </li>
-          <!-- <li>
-            <a href="{{ url('/ide') }">
-              <i class="nc-icon nc-caps-small"></i>
-              <p>Posting Ide</p>
-            </a>
-          </li> -->
         </ul>
       </div>
     </div>
@@ -153,8 +147,14 @@ The above copyright notice and this permission notice shall be included in all c
 
 </div> -->
       <div class="content">
+      <a href="{{ url('/createide') }}">
+        <button type="button" class="btn btn-warning shadow-sm ">
+          <i class="fa fa-plus-square"></i> Create Ide
+        </button>
+      </a>
+
         <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card card-stats">
               <div class="card-body ">
                 <div class="row">
@@ -174,10 +174,12 @@ The above copyright notice and this permission notice shall be included in all c
               </div>
               <div class="card-footer ">
                 <hr>
-                <div class="stats">
-                  <i class="fa fa-refresh"></i> Edit
-                  <i class="fa fa-trash"></i> Delete
-                </div>
+                    <a href="{{ url('/createide') }}">
+                      <i class="fa fa-refresh"></i> Edit
+                    </a>
+                    <a href="{{ url('/createide') }}">
+                      <i class="fa fa-trash"></i> Delete
+                    </a>  
               </div>
             </div>
           </div>
@@ -201,10 +203,12 @@ The above copyright notice and this permission notice shall be included in all c
               </div>
               <div class="card-footer ">
                 <hr>
-                <div class="stats">
-                  <i class="fa fa-refresh"></i> Edit
-                  <i class="fa fa-trash"></i> Delete
-                </div>
+                    <a href="{{ url('/createide') }}">
+                      <i class="fa fa-refresh"></i> Edit
+                    </a>
+                    <a href="{{ url('/createide') }}">
+                      <i class="fa fa-trash"></i> Delete
+                    </a>  
               </div>
             </div>
           </div>
@@ -228,10 +232,12 @@ The above copyright notice and this permission notice shall be included in all c
               </div>
               <div class="card-footer ">
                 <hr>
-                <div class="stats">
-                  <i class="fa fa-refresh"></i> Edit
-                  <i class="fa fa-trash"></i> Delete
-                </div>
+                    <a href="{{ url('/createide') }}">
+                      <i class="fa fa-refresh"></i> Edit
+                    </a>
+                    <a href="{{ url('/createide') }}">
+                      <i class="fa fa-trash"></i> Delete
+                    </a>  
               </div>
             </div>
           </div>
@@ -255,10 +261,12 @@ The above copyright notice and this permission notice shall be included in all c
               </div>
               <div class="card-footer ">
                 <hr>
-                <div class="stats">
-                  <i class="fa fa-refresh"></i> Edit
-                  <i class="fa fa-trash"></i> Delete
-                </div>
+                    <a href="{{ url('/createide') }}">
+                      <i class="fa fa-refresh"></i> Edit
+                    </a>
+                    <a href="{{ url('/createide') }}">
+                      <i class="fa fa-trash"></i> Delete
+                    </a>  
               </div>
             </div>
           </div>
