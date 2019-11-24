@@ -18,6 +18,7 @@
         <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link href="css/gsdk-bootstrap-wizard.css" rel="stylesheet" />
 
+
         <!-- CSS Just for demo purpose, don't include it in your project -->
         <link href="css/demo.css" rel="stylesheet" />
         <link href="css/mystyle.css" rel="stylesheet" />
@@ -29,12 +30,13 @@
             <div class="container">
                 <example-component> </example-component>
             </div>
-
-        <div class="flex-center position-ref full-height">
+        
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm fixed-top">
+        
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/') }}">Home</a>
                         <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -53,13 +55,14 @@
                     @endauth
                 </div>
             @endif
+       
+        </nav>
 
-
-        <div class="image-container set-full-height">
+        
 
                 <!--   Big container   -->
                 <div class="container">
-                <div class="row">
+                <!-- <div class="row"> -->
                 <div class="col-sm-8 col-sm-offset-2">
 
                     <!--      Wizard container        -->
@@ -160,6 +163,35 @@
                                                     </div>
 
                                                 </div>
+                                                <div class="col-sm-4">
+                                                    <div class="choice" data-toggle="wizard-checkbox">
+                                                        <input type="checkbox" name="jobb" value="Design">
+                                                        <div class="icon">
+                                                            <i class="fa fa-pencil"></i>
+                                                        </div>
+                                                        <h6>Design</h6>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="choice" data-toggle="wizard-checkbox">
+                                                        <input type="checkbox" name="jobb" value="Code">
+                                                        <div class="icon">
+                                                            <i class="fa fa-terminal"></i>
+                                                        </div>
+                                                        <h6>Code</h6>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-sm-4">
+                                                    <div class="choice" data-toggle="wizard-checkbox">
+                                                        <input type="checkbox" name="jobb" value="Develop">
+                                                        <div class="icon">
+                                                            <i class="fa fa-laptop"></i>
+                                                        </div>
+                                                        <h6>Develop</h6>
+                                                    </div>
+
+                                                </div>
                                             </div>
 
                                         </div>
@@ -168,8 +200,10 @@
                                 <div class="wizard-footer height-wizard">
                                     <div class="pull-right">
                                         <input type='button' class='btn btn-next btn-fill btn-warning btn-wd btn-sm' name='next' value='Next' />
-                                        <input type='button' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='finish' value='Finish' />
-
+                                        <a href="{{ url('/') }}">
+                                        <input type='button' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='dashboard' value="Dashboard" />
+                                        </a>
+                                       <!-- <a href="#" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a> -->
                                     </div>
 
                                     <div class="pull-left">
@@ -182,12 +216,13 @@
                         </div>
                     </div> <!-- wizard container -->
                 </div>
-                </div><!-- end row -->
-            </div> <!--  big container -->
+                <!-- </div>end row -->
+            </div>  
+            <!-- big container -->
 
 
 
-        </div>
+       
 
 
     <!--   Core JS Files   -->

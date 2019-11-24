@@ -16,7 +16,17 @@ Route::get('/', function () {
 });
 
 
+Route::get('/dashboard', function () {
+    return view('dashboard');
+});
 
+Route::get('/developer', function () {
+    return view('developer');
+});
+
+Route::get('/booking', function () {
+    return view('bookinglist');
+});
 
 Auth::routes();
 
