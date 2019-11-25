@@ -36,3 +36,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/profile','ProfileController@show')->name('profile');
+Route::post('/developer', 'ProfileController@update')->name('developer.update');
+Route::get('/developer','ProfileController@show')->name('profil');

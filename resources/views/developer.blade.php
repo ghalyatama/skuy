@@ -24,7 +24,7 @@ The above copyright notice and this permission notice shall be included in all c
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    IDENATION
+    Paper Dashboard 2 by Creative Tim
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -155,25 +155,21 @@ The above copyright notice and this permission notice shall be included in all c
           <div class="col-md-4">
             <div class="card card-user">
               <div class="image">
-                <img src="../assets/img/damir-bosnjak.jpg" alt="...">
               </div>
               <div class="card-body">
                 <div class="author">
                   <a href="#">
-                    <img class="avatar border-gray" src="../assets/img/mike.jpg" alt="...">
-                    <h5 class="title">Chet Faker</h5>
+                  <img src="{{ asset('img/profile/'.$users->image)  }}" style="max-height:200px;max-width:200px;margin-top:10px;">
+                    <h5 class="title">{{$users->name}}</h5>
                   </a>
-                  <p class="description">
-                    @chetfaker
-                  </p>
                 </div>
                 <p class="description text-center">
-                  "I like the way you work it
-                  <br> No diggity
-                  <br> I wanna bag it up"
+                 {{$users->email}}
+                  <br> {{$users->kontak}}
+                  <br> {{$users->alamat}}
                 </p>
               </div>
-              <div class="card-footer">
+              <!-- <div class="card-footer">
                 <hr>
                 <div class="button-container">
                   <div class="row">
@@ -197,7 +193,7 @@ The above copyright notice and this permission notice shall be included in all c
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div class="card">
               <div class="card-header">
@@ -209,7 +205,7 @@ The above copyright notice and this permission notice shall be included in all c
                     <div class="row">
                       <div class="col-md-2 col-2">
                         <div class="avatar">
-                          <img src="../assets/img/faces/ayo-ogunseinde-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                        <img class="img-responsive img-resize img-thumbnail" src="{{ asset('img/profile/'.$users->image)  }}" alt=""/>
                         </div>
                       </div>
                       <div class="col-md-7 col-7">
@@ -272,9 +268,16 @@ The above copyright notice and this permission notice shall be included in all c
                 <h5 class="card-title">Edit Profile</h5>
               </div>
               <div class="card-body">
-                <form>
+              <form method="post" action="{{ route('developer.update') }}" enctype="multipart/form-data">
+                    @csrf
                   <div class="row">
                     <div class="col-md-5 pr-1">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" name="email" placeholder="email" value="{{$users->email}}">
+                      </div>
+                    </div>
+                    <!-- <div class="col-md-5 pr-1">
                       <div class="form-group">
                         <label>Company (disabled)</label>
                         <input type="text" class="form-control" disabled="" placeholder="Company" value="Creative Code Inc.">
@@ -291,19 +294,28 @@ The above copyright notice and this permission notice shall be included in all c
                         <label for="exampleInputEmail1">Email address</label>
                         <input type="email" class="form-control" placeholder="Email">
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                   <div class="row">
                     <div class="col-md-6 pr-1">
                       <div class="form-group">
-                        <label>First Name</label>
-                        <input type="text" class="form-control" placeholder="Company" value="Chet">
+                        <label>Name</label>
+                        <input id="name" type="text" class="form-control" name="name" placeholder="name" value="{{$users->name}}">
                       </div>
                     </div>
-                    <div class="col-md-6 pl-1">
+                    <!-- <div class="col-md-6 pl-1">
                       <div class="form-group">
                         <label>Last Name</label>
                         <input type="text" class="form-control" placeholder="Last Name" value="Faker">
+                      </div>
+                    </div> -->
+                  </div>
+                  
+                  <div class="row">
+                    <div class="col-md-6 pr-1">
+                      <div class="form-group">
+                        <label>Kontak</label>
+                        <input type="text" class="form-control" name="kontak" placeholder="kontak" value="{{$users->kontak}}">
                       </div>
                     </div>
                   </div>
@@ -311,11 +323,27 @@ The above copyright notice and this permission notice shall be included in all c
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Address</label>
-                        <input type="text" class="form-control" placeholder="Home Address" value="Melbourne, Australia">
+                        <input type="text" class="form-control" name="alamat" placeholder="alamat" value="{{$users->alamat}}">
                       </div>
                     </div>
                   </div>
                   <div class="row">
+                  <input name="_method" type="hidden" value="post">                    
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input type="file" id="inputgambar" name="image" class="validate"/ >
+                        </div>
+                    </div>
+                  </div>          
+                  <div class="row">
+                    <div class="update ml-auto mr-auto">
+                        <a href="{{ route('home') }}" >
+                          <button type="submit" value="Save" class="btn btn-primary btn-round">Update Profile</button>
+                        </a>
+                    </div>
+                  </div>
+                  
+                  <!-- <div class="row">
                     <div class="col-md-4 pr-1">
                       <div class="form-group">
                         <label>City</label>
@@ -334,21 +362,18 @@ The above copyright notice and this permission notice shall be included in all c
                         <input type="number" class="form-control" placeholder="ZIP Code">
                       </div>
                     </div>
-                  </div>
-                  <div class="row">
+                  </div> -->
+                  <!-- <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>About Me</label>
                         <textarea class="form-control textarea">Oh so, your weak rhyme You doubt I'll bother, reading into it</textarea>
                       </div>
                     </div>
-                  </div>
-                  <div class="row">
-                    <div class="update ml-auto mr-auto">
-                      <button type="submit" class="btn btn-primary btn-round">Update Profile</button>
-                    </div>
-                  </div>
+                  </div> -->
+                  
                 </form>
+                
               </div>
             </div>
           </div>
