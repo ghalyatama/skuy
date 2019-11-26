@@ -24,7 +24,7 @@ The above copyright notice and this permission notice shall be included in all c
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    IDENATION
+    Paper Dashboard 2 by Creative Tim
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -93,7 +93,7 @@ The above copyright notice and this permission notice shall be included in all c
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="#pablo">Paper Dashboard 2</a>
+            <a class="navbar-brand" href="#pablo">Profile</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -155,25 +155,21 @@ The above copyright notice and this permission notice shall be included in all c
           <div class="col-md-4">
             <div class="card card-user">
               <div class="image">
-                <img src="../assets/img/damir-bosnjak.jpg" alt="...">
               </div>
               <div class="card-body">
                 <div class="author">
                   <a href="#">
-                    <img class="avatar border-gray" src="../assets/img/mike.jpg" alt="...">
-                    <h5 class="title">Chet Faker</h5>
+                  <img src="{{ asset('img/profile/'.$users->image)  }}" style="max-height:200px;max-width:200px;margin-top:10px;">
+                    <h5 class="title">{{$users->name}}</h5>
                   </a>
-                  <p class="description">
-                    @chetfaker
-                  </p>
                 </div>
                 <p class="description text-center">
-                  "I like the way you work it
-                  <br> No diggity
-                  <br> I wanna bag it up"
+                 {{$users->email}}
+                  <br> {{$users->kontak}}
+                  <br> {{$users->alamat}}
                 </p>
               </div>
-              <div class="card-footer">
+              <!-- <div class="card-footer">
                 <hr>
                 <div class="button-container">
                   <div class="row">
@@ -197,73 +193,7 @@ The above copyright notice and this permission notice shall be included in all c
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-header">
-                <h4 class="card-title">Team Members</h4>
-              </div>
-              <div class="card-body">
-                <ul class="list-unstyled team-members">
-                  <li>
-                    <div class="row">
-                      <div class="col-md-2 col-2">
-                        <div class="avatar">
-                          <img src="../assets/img/faces/ayo-ogunseinde-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                        </div>
-                      </div>
-                      <div class="col-md-7 col-7">
-                        DJ Khaled
-                        <br />
-                        <span class="text-muted">
-                          <small>Offline</small>
-                        </span>
-                      </div>
-                      <div class="col-md-3 col-3 text-right">
-                        <btn class="btn btn-sm btn-outline-success btn-round btn-icon"><i class="fa fa-envelope"></i></btn>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="row">
-                      <div class="col-md-2 col-2">
-                        <div class="avatar">
-                          <img src="../assets/img/faces/joe-gardner-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                        </div>
-                      </div>
-                      <div class="col-md-7 col-7">
-                        Creative Tim
-                        <br />
-                        <span class="text-success">
-                          <small>Available</small>
-                        </span>
-                      </div>
-                      <div class="col-md-3 col-3 text-right">
-                        <btn class="btn btn-sm btn-outline-success btn-round btn-icon"><i class="fa fa-envelope"></i></btn>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="row">
-                      <div class="col-md-2 col-2">
-                        <div class="avatar">
-                          <img src="../assets/img/faces/clem-onojeghuo-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                        </div>
-                      </div>
-                      <div class="col-ms-7 col-7">
-                        Flume
-                        <br />
-                        <span class="text-danger">
-                          <small>Busy</small>
-                        </span>
-                      </div>
-                      <div class="col-md-3 col-3 text-right">
-                        <btn class="btn btn-sm btn-outline-success btn-round btn-icon"><i class="fa fa-envelope"></i></btn>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="col-md-8">
@@ -272,83 +202,120 @@ The above copyright notice and this permission notice shall be included in all c
                 <h5 class="card-title">Edit Profile</h5>
               </div>
               <div class="card-body">
-                <form>
+              <form method="post" action="{{ route('developer.update') }}" enctype="multipart/form-data">
+                    @csrf
                   <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-5 pr-1">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" name="email" placeholder="email" value="{{$users->email}}" readonly>
+                      </div>
+                    </div>
+                    <!-- <div class="col-md-5 pr-1">
+                      <div class="form-group">
+                        <label>Company (disabled)</label>
+                        <input type="text" class="form-control" disabled="" placeholder="Company" value="Creative Code Inc.">
+                      </div>
+                    </div>
+                    <div class="col-md-3 px-1">
+                      <div class="form-group">
+                        <label>Username</label>
+                        <input type="text" class="form-control" placeholder="Username" value="michael23">
+                      </div>
+                    </div>
+                    <div class="col-md-4 pl-1">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" placeholder="Email">
+                      </div>
+                    </div> -->
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 pr-1">
+                      <div class="form-group">
+                        <label>Name</label>
+                        <input id="name" type="text" class="form-control" name="name" placeholder="name" value="{{$users->name}}">
+                      </div>
+                    </div>
+                    <!-- <div class="col-md-6 pl-1">
                       <div class="form-group">
                         <label>Nama</label>
                         <input type="text" class="form-control" placeholder="Name" value="{{$users->name}}">
                       </div>
-                    </div>
+                    </div> -->
                   </div>
+                  
                   <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6 pr-1">
                       <div class="form-group">
-                        <label for="exampleInputEmail1">Email</label>
-                        <input type="email" class="form-control" placeholder="Email" value="{{$users->email}}">
+                        <label>Kontak</label>
+                        <input type="text" class="form-control" name="kontak" placeholder="kontak" value="{{$users->kontak}}">
                       </div>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Address</label>
+                        <input type="text" class="form-control" name="alamat" placeholder="alamat" value="{{$users->alamat}}">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                  <div class="col-md-12">
+                    <input name="_method" type="hidden" value="post">                    
+                      <div class="row">
+                          <div class="input-field col s6">
+                              <input type="file" id="inputgambar" name="image" class="validate"/ >
+                          </div>
+                      </div>
+                  </div>
+                  </div>          
+                  <div class="row">
+                    <div class="update ml-auto mr-auto">
+                        <a href="{{ route('home') }}" >
+                          <button type="submit" value="Save" class="btn btn-primary btn-round">Update Profile</button>
+                        </a>
+                    </div>
+                  </div>
+                  
+                  <!-- <div class="row">
+                    <div class="col-md-4 pr-1">
+                      <div class="form-group">
+                        <label>City</label>
+                        <input type="text" class="form-control" placeholder="City" value="Melbourne">
+                      </div>
+                    </div>
+                    <div class="col-md-4 px-1">
+                      <div class="form-group">
+                        <label>Country</label>
+                        <input type="text" class="form-control" placeholder="Country" value="Australia">
+                      </div>
+                    </div>
+                    <div class="col-md-4 pl-1">
                       <div class="form-group">
                         <label>Alamat</label>
                         <input type="text" class="form-control" placeholder="Alamat" value="{{$users->alamat}}">
                       </div>
                     </div>
-                  </div>
-
-                  <div class="row">
+                  </div> -->
+                  <!-- <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Kontak</label>
                         <input type="text" class="form-control" placeholder="0822xxxxxxxx" value="{{$users->kontak}}">
                       </div>
                     </div>
-                  </div>
-            
-                  <div class="row">
-                    <div class="update ml-auto mr-auto">
-                      <a href="{{ url('/booking') }}">
-                        <button type="submit" class="btn btn-primary btn-round">Update Profile</button>
-                      </a>
-                    </div>
-                  </div> 
+                  </div> -->
+                  
                 </form>
                 
-        
               </div>
             </div>
           </div>
         </div>
       </div>
-      <footer class="footer footer-black  footer-white ">
-        <div class="container-fluid">
-          <div class="row">
-            <nav class="footer-nav">
-              <ul>
-                <li>
-                  <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>
-                </li>
-                <li>
-                  <a href="http://blog.creative-tim.com/" target="_blank">Blog</a>
-                </li>
-                <li>
-                  <a href="https://www.creative-tim.com/license" target="_blank">Licenses</a>
-                </li>
-              </ul>
-            </nav>
-            <div class="credits ml-auto">
-              <span class="copyright">
-                ©
-                <script>
-                  document.write(new Date().getFullYear())
-                </script>, made with <i class="fa fa-heart heart"></i> by Creative Tim
-              </span>
-            </div>
-          </div>
-        </div>
-      </footer>
+      
     </div>
   </div>
   <!--   Core JS Files   -->

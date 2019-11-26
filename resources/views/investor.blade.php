@@ -57,6 +57,9 @@
         
             </nav>
 
+
+      
+
                 <!--   Big container   -->
                 <div class="container">
                 <div class="row">
@@ -99,27 +102,27 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>Perusahaan:</label>
-                                                <p class="text-primary"> {{$users->perusahaan}} </p>
+                                                <p class="text-primary"> SkuyComps </p>
                                             </div>
                                             <div class="form-group">
                                                 <label>Nama         :</label>
-                                                <p class="text-primary"> {{$users->name}} </p>
+                                                <p class="text-primary"> Otto Iskandar </p>
                                             </div>
                                             <div class="form-group">
                                                 <label>Posisi       :<small>(developer/investor)</small></label>
-                                                <p class="text-primary"> {{$users->posisi}} </p>
+                                                <p class="text-primary"> Investor </p>
                                             </div>
                                             <div class="form-group">
                                                 <label>Email        :</label>
-                                                <p class="text-primary"> {{$users->email}} </p>
+                                                <p class="text-primary"> otto.ottong@gmail.com </p>
                                             </div>
                                             <div class="form-group">
                                                 <label>Alamat       :</label>
-                                                <p class="text-primary"> {{$users->alamat}} </p>
+                                                <p class="text-primary"> diatas langit bawah bumi </p>
                                             </div>
                                             <div class="form-group">
                                                 <label>Kontak       :</label>
-                                                <p class="text-primary"> {{$users->kontak}} </p>
+                                                <p class="text-primary"> 0822 -2222 -2222 </p>
                                             </div>
                                         </div>
                                         <!-- <div class="col-sm-10 col-sm-offset-1"> -->
@@ -130,9 +133,7 @@
                                 </div>
                                 <div class="wizard-footer height-wizard">
                                     <div class="pull-right">
-                                        
-                                        <input type='button' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='edit profile' value='Edit Profile' />
-
+                                        <a href="{{url ('/editprofileinvestor')}}" class="btn btn-fill btn-warning btn-round" role="button">Edit Profile</a>
                                     </div>
 
                                     <div class="clearfix"></div>

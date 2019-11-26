@@ -93,7 +93,7 @@ The above copyright notice and this permission notice shall be included in all c
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="#pablo">Paper Dashboard 2</a>
+            <a class="navbar-brand" href="#pablo">Booking List</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -161,19 +161,62 @@ The above copyright notice and this permission notice shall be included in all c
                 <div class="table-responsive">
                   <table class="table">
                     <thead class=" text-primary">
-                      <th>
-                        Name
-                      </th>
-                      <th>
-                        Country
-                      </th>
-                      <th>
-                        City
-                      </th>
-                      <th class="text-right">
-                        Salary
-                      </th>
+                      <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">Nama Ide</th>
+                        <th scope="col">Investor</th>
+                        <th class="text-right"></th>
+                      </tr>
                     </thead>
+                    <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td><p class="text-truncate" style="max-width: 250px;">Aplikasi  Pembelajaran Bocil Tik-Tok</p></td>
+                          <td> 
+                            <a href="#">Otto Iskandar</a>
+                          </td>
+                          <td>
+                            <a class="btn btn-warning" href="#" role="button">Accept</a>
+                            <a class="btn btn-warning" href="#" role="button">Ignore</a>
+                          </td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+
+      <!-- Booking Finish -->
+      
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title">Booking Finished</h4>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead class=" text-primary">
+                      <tr>
+                        <th scope="col">No.</th>
+                        <th scope="col">Nama Ide</th>
+                        <th scope="col">Investor</th>
+                        <th class="text-right"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td><p class="text-truncate" style="max-width: 250px;">Aplikasi  Pembelajaran Bocil Tik-Tok</p></td>
+                          <td> 
+                            <a href="/investor">Otto Iskandar</a>
+                          </td>
+                        </tr>
+                    </tbody>
                   </table>
                 </div>
               </div>
@@ -181,33 +224,10 @@ The above copyright notice and this permission notice shall be included in all c
           </div>
         </div>
       </div>
-      <footer class="footer footer-black  footer-white ">
-        <div class="container-fluid">
-          <div class="row">
-            <nav class="footer-nav">
-              <ul>
-                <li>
-                  <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>
-                </li>
-                <li>
-                  <a href="http://blog.creative-tim.com/" target="_blank">Blog</a>
-                </li>
-                <li>
-                  <a href="https://www.creative-tim.com/license" target="_blank">Licenses</a>
-                </li>
-              </ul>
-            </nav>
-            <div class="credits ml-auto">
-              <span class="copyright">
-                ©
-                <script>
-                  document.write(new Date().getFullYear())
-                </script>, made with <i class="fa fa-heart heart"></i> by Creative Tim
-              </span>
-            </div>
-          </div>
-        </div>
-      </footer>
+      
+      <!-- Booking Finish -->
+
+
     </div>
   </div>
   <!--   Core JS Files   -->

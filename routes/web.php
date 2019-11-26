@@ -32,8 +32,17 @@ Route::get('/createide', function () {
     return view('createide');
 });
 
+Route::get('/investor', function () {
+    return view('investor');
+});
+
+Route::get('/editprofileinvestor', function () {
+    return view('editprofileinvestor');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/profile','ProfileController@show')->name('profile');
+Route::post('/developer', 'ProfileController@update')->name('developer.update');
 Route::get('/developer','ProfileController@show')->name('profil');

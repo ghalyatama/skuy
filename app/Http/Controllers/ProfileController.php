@@ -27,16 +27,26 @@ class ProfileController extends Controller
         endif;
         }
 
-    public function update(Request $request)
-    {
-        $data = Auth::user();
-        $data->update([
-            'name' => request('name'),
-            'no_telp' => request('no_telp'),
-            'email' => request('email'),
-            'alamat' => request('alamat'),
-            'status' => request('status')
-        ]);
-        return redirect()->route('profile')->with('alert-success','Data berhasil diubah!');
-    }
+        public function update(Request $request)
+        {
+            $users = Auth::user();
+            $users->name = $request->get('name');
+            $users->kontak = $request->get('kontak');
+            $users->email = $request->get('email');
+            $users->alamat = $request->get('alamat');
+            if($request->file('image') == "")
+        {
+            $users->image = $users->image;
+        } 
+        else
+        {
+            $file       = $request->file('image');
+            $fileName   = $file->getClientOriginalName();
+            $request->file('image')->move("img/profile/", $fileName);
+            $users->image = $fileName;
+        }
+           // dd($users);
+           $users->update();
+            return redirect('/developer')->with('alert-success','Data berhasil diubah!');
+        }
 }
