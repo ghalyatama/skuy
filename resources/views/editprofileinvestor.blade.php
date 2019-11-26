@@ -57,6 +57,9 @@
         
             </nav>
 
+
+      
+
                 <!--   Big container   -->
                 <div class="container">
                 <div class="row">
@@ -90,37 +93,53 @@
                                         <div class="col-sm-4 col-sm-offset-1">
                                             <div class="picture-container">
                                                 <div class="picture">
-                                                    <img src="img/default-avatar.png" class="picture-src" id="wizardPicturePreview" title=""/>
-                                                    <input type="file" id="wizard-picture">
+                                                    <img src="img/default-avatar.png" class="picture-src" id="" title=""/>
                                                 </div>
-                                                <h6>Choose Picture</h6>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
-                                                <label>Perusahaan:</label>
-                                                <p class="text-primary"> {{$users->perusahaan}} </p>
+                                                <div class="col-sm-12">
+                                                  <input type="text" class="form-control" id="" placeholder="Perusahaan" value="SkuyComps">
+                                                </div>
                                             </div>
                                             <div class="form-group">
-                                                <label>Nama         :</label>
-                                                <p class="text-primary"> {{$users->name}} </p>
+                                                <div class="col-sm-12">
+                                                  <input type="text" class="form-control" id="" placeholder="Nama" value="Otto Iskandar">
+                                                </div>
                                             </div>
                                             <div class="form-group">
-                                                <label>Posisi       :<small>(developer/investor)</small></label>
-                                                <p class="text-primary"> {{$users->posisi}} </p>
+                                                <div class="col-sm-12">
+                                                  <input type="text" class="form-control" id="" placeholder="Posisi" Value="Investor" readonly>
+                                                </div>
                                             </div>
                                             <div class="form-group">
-                                                <label>Email        :</label>
-                                                <p class="text-primary"> {{$users->email}} </p>
+                                                <div class="col-sm-12">
+                                                  <input type="email" class="form-control" id="" placeholder="Email" value="otto.ottong@gmail.com" readonly>
+                                                </div>
                                             </div>
                                             <div class="form-group">
-                                                <label>Alamat       :</label>
-                                                <p class="text-primary"> {{$users->alamat}} </p>
+                                                <div class="col-sm-12">
+                                                  <input type="text" class="form-control" id="" placeholder="Alamat">
+                                                </div>
                                             </div>
                                             <div class="form-group">
-                                                <label>Kontak       :</label>
-                                                <p class="text-primary"> {{$users->kontak}} </p>
+                                                <div class="col-sm-12">
+                                                  <input type="text" class="form-control" id="" placeholder="Kontak">
+                                                </div>
                                             </div>
+
+                                            <div class="form-group">
+                                            <div class="col-sm-12">
+                                                <input name="_method" type="hidden" value="post">                    
+                                                    <div class="row">
+                                                        <div class="input-field col s6">
+                                                            <input type="file" id="inputgambar" name="image" class="validate"/ >
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            </div>
+
                                         </div>
                                         <!-- <div class="col-sm-10 col-sm-offset-1"> -->
                                             
@@ -130,9 +149,17 @@
                                 </div>
                                 <div class="wizard-footer height-wizard">
                                     <div class="pull-right">
-                                        <a href="{{url ('/editprofileinvestor')}}"> 
-                                            <input type='button' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='edit profile' value='Edit Profile' />
-                                        </a>
+                                        <div class="update ml-auto mr-auto">
+                                            <a href="{{ route('profile') }}" class="btn btn-fill btn-round btn-warning" role="button">
+                                                Update Profile
+                                              <!-- <button type="submit" value="Save" class="btn btn-fill btn-warning btn-round">Update Profile</button> -->
+                                            </a>
+
+                                            <a href="{{ route('profile') }}" class="btn btn-round btn-warning" role="button">
+                                                Cancel
+                                              <!-- <button type="submit" value="Save" class="btn btn-fill btn-light btn-round">Cancel</button> -->
+                                            </a>
+                                        </div>
                                     </div>
 
                                     <div class="clearfix"></div>

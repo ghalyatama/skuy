@@ -57,6 +57,9 @@
         
             </nav>
 
+
+      
+
                 <!--   Big container   -->
                 <div class="container">
                 <div class="row">
@@ -71,14 +74,13 @@
 
                                 <div class="wizard-header">
                                     <h3>
-                                    YOUR PROFILE <br>
-                                    <small>This information will let us know more about you.</small>
+                                    Otto's Profile <br>
                                     </h3>
                                 </div>
 
                                 <div class="wizard-navigation">
                                     <ul>
-                                        <li><a href="#about" data-toggle="tab">About</a></li>
+                                        <li><a href="#about" data-toggle="tab">About Investor</a></li>
                                     </ul>
 
                                 </div>
@@ -86,40 +88,38 @@
                                 <div class="tab-content">
                                     <div class="tab-pane" id="about">
                                     <div class="row">
-                                        <h4 class="info-text"> Let's start with the basic information (with validation)</h4>
+                                        <h4 class="info-text"> Let's start with the basic information</h4>
                                         <div class="col-sm-4 col-sm-offset-1">
                                             <div class="picture-container">
                                                 <div class="picture">
-                                                    <img src="img/default-avatar.png" class="picture-src" id="wizardPicturePreview" title=""/>
-                                                    <input type="file" id="wizard-picture">
+                                                    <img src="img/default-avatar.png" class="picture-src" title=""/>
                                                 </div>
-                                                <h6>Choose Picture</h6>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>Perusahaan:</label>
-                                                <p class="text-primary"> {{$users->perusahaan}} </p>
+                                                <p class="text-primary"> SkuyComps </p>
                                             </div>
                                             <div class="form-group">
                                                 <label>Nama         :</label>
-                                                <p class="text-primary"> {{$users->name}} </p>
+                                                <p class="text-primary"> Otto Iskandar </p>
                                             </div>
                                             <div class="form-group">
                                                 <label>Posisi       :<small>(developer/investor)</small></label>
-                                                <p class="text-primary"> {{$users->posisi}} </p>
+                                                <p class="text-primary"> Investor </p>
                                             </div>
                                             <div class="form-group">
                                                 <label>Email        :</label>
-                                                <p class="text-primary"> {{$users->email}} </p>
+                                                <p class="text-primary"> otto.ottong@gmail.com </p>
                                             </div>
                                             <div class="form-group">
                                                 <label>Alamat       :</label>
-                                                <p class="text-primary"> {{$users->alamat}} </p>
+                                                <p class="text-primary"> diatas langit bawah bumi </p>
                                             </div>
                                             <div class="form-group">
                                                 <label>Kontak       :</label>
-                                                <p class="text-primary"> {{$users->kontak}} </p>
+                                                <p class="text-primary"> 0822 -2222 -2222 </p>
                                             </div>
                                         </div>
                                         <!-- <div class="col-sm-10 col-sm-offset-1"> -->
@@ -128,15 +128,19 @@
                                     </div>
                                     </div>
                                 </div>
+             
                                 <div class="wizard-footer height-wizard">
                                     <div class="pull-right">
-                                        <a href="{{url ('/editprofileinvestor')}}"> 
-                                            <input type='button' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='edit profile' value='Edit Profile' />
-                                        </a>
+                                        <div class="update ml-auto mr-auto">
+                                            <a href="{{ url('/dashboard') }}" class="btn btn-round btn-warning" role="button">
+                                                Back
+                                            </a>
+                                        </div>
                                     </div>
 
                                     <div class="clearfix"></div>
                                 </div>
+                                
 
                             </form>
                         </div>

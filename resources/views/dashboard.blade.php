@@ -156,18 +156,107 @@ The above copyright notice and this permission notice shall be included in all c
         <div class="row">
         @foreach($show as $sh)
         <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="card card-stats">
+            <div class="card card-stats" >
               <div class="card-body ">
                 <div class="row">
                   <div class="col-5 col-md-4">
                     <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-globe text-warning"></i>
+                      <img src="img/image.png" class="rounded">
                     </div>
                   </div>
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">Web</p>
                       <p class="card-title">{{ $sh->nama }}
+                    </div>
+                    
+                  </div>
+                  <div class="col-7 col-md-12">
+                     <p class="card-text text-truncate" style="max-width: 150px;">sjhaskjahskjhasjkdhkjasjhvahsxhjasvxhaskxakjshxjabsxbbashsaj </p>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer ">
+                <hr>
+                    <a href="{{ url('/createide') }}">
+                      <i class="fa fa-refresh"></i> Edit
+                    </a>
+                    <a href="{{ url('/createide') }}">
+                      <i class="fa fa-trash"></i> Delete
+                    </a>  
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+              <div class="card-body ">
+                <div class="row">
+                  <div class="col-5 col-md-4">
+                    <div class="icon-big text-center icon-warning">
+                      <i class="nc-icon nc-money-coins text-success"></i>
+                    </div>
+                  </div>
+                  <div class="col-7 col-md-8">
+                    <div class="numbers">
+                      <p class="card-category">Mobile</p>
+                      <p class="card-title"> IDE 2</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer ">
+                <hr>
+                    <a href="{{ url('/createide') }}">
+                      <i class="fa fa-refresh"></i> Edit
+                    </a>
+                    <a href="{{ url('/createide') }}">
+                      <i class="fa fa-trash"></i> Delete
+                    </a>  
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+              <div class="card-body ">
+                <div class="row">
+                  <div class="col-5 col-md-4">
+                    <div class="icon-big text-center icon-warning">
+                      <i class="nc-icon nc-vector text-danger"></i>
+                    </div>
+                  </div>
+                  <div class="col-7 col-md-8">
+                    <div class="numbers">
+                      <p class="card-category">Protoype</p>
+                      <p class="card-title"> IDE 3
+                        <p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer ">
+                <hr>
+                    <a href="{{ url('/createide') }}">
+                      <i class="fa fa-refresh"></i> Edit
+                    </a>
+                    <a href="{{ url('/createide') }}">
+                      <i class="fa fa-trash"></i> Delete
+                    </a>  
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="card card-stats">
+              <div class="card-body ">
+                <div class="row">
+                  <div class="col-5 col-md-4">
+                    <div class="icon-big text-center icon-warning">
+                      <i class="nc-icon nc-favourite-28 text-primary"></i>
+                    </div>
+                  </div>
+                  <div class="col-7 col-md-8">
+                    <div class="numbers">
+                      <p class="card-category">Web</p>
+                      <p class="card-title">IDE 4
                         <p>
                     </div>
                   </div>

@@ -93,7 +93,7 @@ The above copyright notice and this permission notice shall be included in all c
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="#pablo">Paper Dashboard 2</a>
+            <a class="navbar-brand" href="#pablo">Profile</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -195,72 +195,6 @@ The above copyright notice and this permission notice shall be included in all c
                 </div>
               </div> -->
             </div>
-            <div class="card">
-              <div class="card-header">
-                <h4 class="card-title">Team Members</h4>
-              </div>
-              <div class="card-body">
-                <ul class="list-unstyled team-members">
-                  <li>
-                    <div class="row">
-                      <div class="col-md-2 col-2">
-                        <div class="avatar">
-                        <img class="img-responsive img-resize img-thumbnail" src="{{ asset('img/profile/'.$users->image)  }}" alt=""/>
-                        </div>
-                      </div>
-                      <div class="col-md-7 col-7">
-                        DJ Khaled
-                        <br />
-                        <span class="text-muted">
-                          <small>Offline</small>
-                        </span>
-                      </div>
-                      <div class="col-md-3 col-3 text-right">
-                        <btn class="btn btn-sm btn-outline-success btn-round btn-icon"><i class="fa fa-envelope"></i></btn>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="row">
-                      <div class="col-md-2 col-2">
-                        <div class="avatar">
-                          <img src="../assets/img/faces/joe-gardner-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                        </div>
-                      </div>
-                      <div class="col-md-7 col-7">
-                        Creative Tim
-                        <br />
-                        <span class="text-success">
-                          <small>Available</small>
-                        </span>
-                      </div>
-                      <div class="col-md-3 col-3 text-right">
-                        <btn class="btn btn-sm btn-outline-success btn-round btn-icon"><i class="fa fa-envelope"></i></btn>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="row">
-                      <div class="col-md-2 col-2">
-                        <div class="avatar">
-                          <img src="../assets/img/faces/clem-onojeghuo-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
-                        </div>
-                      </div>
-                      <div class="col-ms-7 col-7">
-                        Flume
-                        <br />
-                        <span class="text-danger">
-                          <small>Busy</small>
-                        </span>
-                      </div>
-                      <div class="col-md-3 col-3 text-right">
-                        <btn class="btn btn-sm btn-outline-success btn-round btn-icon"><i class="fa fa-envelope"></i></btn>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
           <div class="col-md-8">
             <div class="card card-user">
@@ -274,7 +208,7 @@ The above copyright notice and this permission notice shall be included in all c
                     <div class="col-md-5 pr-1">
                       <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" name="email" placeholder="email" value="{{$users->email}}">
+                        <input type="email" class="form-control" name="email" placeholder="email" value="{{$users->email}}" readonly>
                       </div>
                     </div>
                     <!-- <div class="col-md-5 pr-1">
@@ -305,8 +239,8 @@ The above copyright notice and this permission notice shall be included in all c
                     </div>
                     <!-- <div class="col-md-6 pl-1">
                       <div class="form-group">
-                        <label>Last Name</label>
-                        <input type="text" class="form-control" placeholder="Last Name" value="Faker">
+                        <label>Nama</label>
+                        <input type="text" class="form-control" placeholder="Name" value="{{$users->name}}">
                       </div>
                     </div> -->
                   </div>
@@ -328,12 +262,14 @@ The above copyright notice and this permission notice shall be included in all c
                     </div>
                   </div>
                   <div class="row">
-                  <input name="_method" type="hidden" value="post">                    
-                    <div class="row">
-                        <div class="input-field col s6">
-                            <input type="file" id="inputgambar" name="image" class="validate"/ >
-                        </div>
-                    </div>
+                  <div class="col-md-12">
+                    <input name="_method" type="hidden" value="post">                    
+                      <div class="row">
+                          <div class="input-field col s6">
+                              <input type="file" id="inputgambar" name="image" class="validate"/ >
+                          </div>
+                      </div>
+                  </div>
                   </div>          
                   <div class="row">
                     <div class="update ml-auto mr-auto">
@@ -358,16 +294,16 @@ The above copyright notice and this permission notice shall be included in all c
                     </div>
                     <div class="col-md-4 pl-1">
                       <div class="form-group">
-                        <label>Postal Code</label>
-                        <input type="number" class="form-control" placeholder="ZIP Code">
+                        <label>Alamat</label>
+                        <input type="text" class="form-control" placeholder="Alamat" value="{{$users->alamat}}">
                       </div>
                     </div>
                   </div> -->
                   <!-- <div class="row">
                     <div class="col-md-12">
                       <div class="form-group">
-                        <label>About Me</label>
-                        <textarea class="form-control textarea">Oh so, your weak rhyme You doubt I'll bother, reading into it</textarea>
+                        <label>Kontak</label>
+                        <input type="text" class="form-control" placeholder="0822xxxxxxxx" value="{{$users->kontak}}">
                       </div>
                     </div>
                   </div> -->
@@ -379,33 +315,7 @@ The above copyright notice and this permission notice shall be included in all c
           </div>
         </div>
       </div>
-      <footer class="footer footer-black  footer-white ">
-        <div class="container-fluid">
-          <div class="row">
-            <nav class="footer-nav">
-              <ul>
-                <li>
-                  <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>
-                </li>
-                <li>
-                  <a href="http://blog.creative-tim.com/" target="_blank">Blog</a>
-                </li>
-                <li>
-                  <a href="https://www.creative-tim.com/license" target="_blank">Licenses</a>
-                </li>
-              </ul>
-            </nav>
-            <div class="credits ml-auto">
-              <span class="copyright">
-                ©
-                <script>
-                  document.write(new Date().getFullYear())
-                </script>, made with <i class="fa fa-heart heart"></i> by Creative Tim
-              </span>
-            </div>
-          </div>
-        </div>
-      </footer>
+      
     </div>
   </div>
   <!--   Core JS Files   -->

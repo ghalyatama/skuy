@@ -24,7 +24,7 @@
                                 </span>
                             </div>
 
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Username..." autofocus>
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email..." autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
