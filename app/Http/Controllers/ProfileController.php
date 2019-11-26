@@ -21,7 +21,7 @@ class ProfileController extends Controller
         $users = Auth::user();
         //dd($users);
         if ($users['status'] =='1'):
-            return view('profiledeveloper', compact('users'));
+            return view('developer', compact('users'));
         else:
             return view('profileinvestor', compact('users'));
         endif;
