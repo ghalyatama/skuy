@@ -35,6 +35,14 @@ Route::get('/createide', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+///Routing untuk profile
 Route::get('/profile','ProfileController@show')->name('profile');
 Route::post('/developer', 'ProfileController@update')->name('developer.update');
 Route::get('/developer','ProfileController@show')->name('profil');
+
+//Routing untuk ide
+Route::post('/createide', 'IdeController@store')->name('store.ide');
+Route::get('/dashboard','IdeController@showperakun')->name('ide.akun');
+Route::post('/editide', 'IdeController@update')->name('update.ide');
+Route::delete('/hapuside/{id}/delete', 'IdeController@hapus')->name('delete.ide');
