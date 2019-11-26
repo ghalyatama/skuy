@@ -130,9 +130,9 @@
                                 </div>
                                 <div class="wizard-footer height-wizard">
                                     <div class="pull-right">
-                                        
-                                        <input type='button' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='edit profile' value='Edit Profile' />
-
+                                        <a href="{{url ('/editprofileinvestor')}}"> 
+                                            <input type='button' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='edit profile' value='Edit Profile' />
+                                        </a>
                                     </div>
 
                                     <div class="clearfix"></div>

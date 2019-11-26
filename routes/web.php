@@ -40,6 +40,10 @@ Route::get('/editprofileinvestor', function () {
     return view('editprofileinvestor');
 });
 
+Route::get('/profileinvestor', function () {
+    return view('profileinvestor');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

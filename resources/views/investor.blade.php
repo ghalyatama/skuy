@@ -74,14 +74,13 @@
 
                                 <div class="wizard-header">
                                     <h3>
-                                    YOUR PROFILE <br>
-                                    <small>This information will let us know more about you.</small>
+                                    Otto's Profile <br>
                                     </h3>
                                 </div>
 
                                 <div class="wizard-navigation">
                                     <ul>
-                                        <li><a href="#about" data-toggle="tab">About</a></li>
+                                        <li><a href="#about" data-toggle="tab">About Investor</a></li>
                                     </ul>
 
                                 </div>
@@ -89,14 +88,12 @@
                                 <div class="tab-content">
                                     <div class="tab-pane" id="about">
                                     <div class="row">
-                                        <h4 class="info-text"> Let's start with the basic information (with validation)</h4>
+                                        <h4 class="info-text"> Let's start with the basic information</h4>
                                         <div class="col-sm-4 col-sm-offset-1">
                                             <div class="picture-container">
                                                 <div class="picture">
-                                                    <img src="img/default-avatar.png" class="picture-src" id="wizardPicturePreview" title=""/>
-                                                    <input type="file" id="wizard-picture">
+                                                    <img src="img/default-avatar.png" class="picture-src" title=""/>
                                                 </div>
-                                                <h6>Choose Picture</h6>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
@@ -131,13 +128,19 @@
                                     </div>
                                     </div>
                                 </div>
+             
                                 <div class="wizard-footer height-wizard">
                                     <div class="pull-right">
-                                        <a href="{{url ('/editprofileinvestor')}}" class="btn btn-fill btn-warning btn-round" role="button">Edit Profile</a>
+                                        <div class="update ml-auto mr-auto">
+                                            <a href="{{ url('/dashboard') }}" class="btn btn-round btn-warning" role="button">
+                                                Back
+                                            </a>
+                                        </div>
                                     </div>
 
                                     <div class="clearfix"></div>
                                 </div>
+                                
 
                             </form>
                         </div>

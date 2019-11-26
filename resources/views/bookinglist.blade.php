@@ -173,7 +173,7 @@ The above copyright notice and this permission notice shall be included in all c
                           <th scope="row">1</th>
                           <td><p class="text-truncate" style="max-width: 250px;">Aplikasi  Pembelajaran Bocil Tik-Tok</p></td>
                           <td> 
-                            <a href="#">Otto Iskandar</a>
+                            <a href="/investor">Otto Iskandar</a>
                           </td>
                           <td>
                             <a class="btn btn-warning" href="#" role="button">Accept</a>

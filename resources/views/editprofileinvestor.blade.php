@@ -150,12 +150,12 @@
                                 <div class="wizard-footer height-wizard">
                                     <div class="pull-right">
                                         <div class="update ml-auto mr-auto">
-                                            <a href="{{ url('/investor') }}" class="btn btn-fill btn-round btn-warning" role="button">
-                                                Edit Profile
+                                            <a href="{{ route('profile') }}" class="btn btn-fill btn-round btn-warning" role="button">
+                                                Update Profile
                                               <!-- <button type="submit" value="Save" class="btn btn-fill btn-warning btn-round">Update Profile</button> -->
                                             </a>
 
-                                            <a href="{{ url('/investor') }}" class="btn btn-round btn-warning" role="button">
+                                            <a href="{{ route('profile') }}" class="btn btn-round btn-warning" role="button">
                                                 Cancel
                                               <!-- <button type="submit" value="Save" class="btn btn-fill btn-light btn-round">Cancel</button> -->
                                             </a>
