@@ -44,6 +44,10 @@ Route::get('/profileinvestor', function () {
     return view('profileinvestor');
 });
 
+Route::get('/developerprofile', function () {
+    return view('developerprofile');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
