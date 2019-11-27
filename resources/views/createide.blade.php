@@ -103,9 +103,9 @@
                 <div class="card-body pad">
                 <small class="form-text text-muted">Description: </small>
                   <div class="mb-3">
-                    <textarea name="Deskripsi" class="textarea" placeholder="Place some text here"
+                    <textarea name="Deskripsi" type="text" class="form-control textarea" placeholder="Place some text here"
                               style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
-                                <p></p>
+                                
                               </textarea>
                   </div>
                 

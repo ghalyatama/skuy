@@ -153,14 +153,17 @@
 
               <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card h-100">
-                  <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt="" ></a>
+                  <a href="#"><img class="card-img-top" src="img/idenation.png" alt="" ></a>
                   <div class="card-body">
                     <h4 class="card-title">
                       <a class="category text-primary" href="#">Judul Ide</a>
                     </h4>
-                    <p class="card-text text-truncate " style="max-width: 200px;">Before getting started with Bootstrap’s modal component, be sure to read the following as our menu options have recently changed.
-                            Modals are built with HTML, CSS, and JavaScript. They’re positioned over everything else in the document and remove scroll from the so that modal content scrolls instead.
-    Clicking on the modal “backdrop” will automatically close the modal. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                    <p class="card-text text-truncate " style="max-width: 200px;">
+                    Banyak ide kreatif aplikasi yang berguna di cetuskan, bahkan tidak 
+                    hanya dari para founder perusahaan-perusahaan ternama. Kebanyakan 
+                    dari mereka yang memiliki ide kreatif tidak bisa merealisasikan idenya 
+                    karena masalah dana atau financial. 
+                    </p>
                   </div>
                   <div class="card-footer">
                     <!-- Button trigger modal -->
@@ -175,20 +178,19 @@
                         <div class="modal-dialog modal-dialog-scrollable" role="document">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalScrollableTitle">Judul Ide</h5>
+                              <h5 class="modal-title" id="exampleModalScrollableTitle">Idenation</h5>
                               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                               </button>
                             </div>
                             <div class="modal-body">
-                                <img class="card-img-top" src="http://placehold.it/700x400" alt="" >
-                            Before getting started with Bootstrap’s modal component, be sure to read the following as our menu options have recently changed.
-                            Modals are built with HTML, CSS, and JavaScript. They’re positioned over everything else in the document and remove scroll from the so that modal content scrolls instead.
-    Clicking on the modal “backdrop” will automatically close the modal.
-    Bootstrap only supports one modal window at a time. Nested modals aren’t supported as we believe them to be poor user experiences.
-    Modals use position: fixed, which can sometimes be a bit particular about its rendering. Whenever possible, place your modal HTML in a top-level position to avoid potential interference from other elements. You’ll likely run into issues when nesting a .modal within another fixed element.
-    Once again, due to position: fixed, there are some caveats with using modals on mobile devices. See our browser support docs for details.
-    Due to how HTML5 defines its semantics, the autofocus HTML attribute has no effect in Bootstrap modals. To achieve the same effect, use some custom JavaScript:
+                                <img class="card-img-top" src="img/idenation.png" alt="" >
+                                <p>
+                                Banyak ide kreatif aplikasi yang berguna di cetuskan, bahkan tidak 
+                                hanya dari para founder perusahaan-perusahaan ternama. Kebanyakan 
+                                dari mereka yang memiliki ide kreatif tidak bisa merealisasikan idenya 
+                                karena masalah dana atau financial.
+                                </p> 
                             </div>
                             <div class="modal-footer">
                               <div class="pull-left">  
