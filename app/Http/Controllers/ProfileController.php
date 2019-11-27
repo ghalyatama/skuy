@@ -25,6 +25,24 @@ class ProfileController extends Controller
         
     }
 
+    public function tampilaninvestor(Request $request, $id)
+    {   
+        $nama = \App\Booking::find($id);
+        $datas = DB::table('users')->where('name', $nama['nama_investor'])->first();
+        //dd($datas);
+        return view('investor', compact('datas'));
+        
+    }
+
+    public function tampilandeveloper(Request $request, $id)
+    {   
+        $nama = \App\Ide::find($id);
+        $datas = DB::table('users')->where('name', $nama['nama_user'])->first();
+        //dd($datas);
+        return view('profiledeveloper', compact('datas'));
+        
+    }
+
     public function show(Request $users)
     {   
         $users = Auth::user();

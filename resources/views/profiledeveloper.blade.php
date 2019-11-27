@@ -94,7 +94,7 @@
                                         <div class="col-sm-4 col-sm-offset-1">
                                             <div class="picture-container">
                                                 <div class="picture">
-                                                    <img src="img/default-avatar.png" class="picture-src" id="wizardPicturePreview" title=""/>
+                                                    <img src="{{ asset('img/profile/'.$datas->image)  }}" class="picture-src" id="wizardPicturePreview" title=""/>
                                                     <input type="file" id="wizard-picture">
                                                 </div>
                                                 <h6>Choose Picture</h6>
@@ -103,7 +103,7 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>Your Name</label>
-                                                <p class="text-primary"> {{$users->name}} </p>
+                                                <p class="text-primary"> {{$datas->name}} </p>
                                             </div>
                                             <div class="form-group">
                                                 <label>Position <small>(developer/investor)</small></label>
@@ -111,16 +111,16 @@
                                             </div>
                                             <div class="form-group">
                                                 <label>Your Email</label>
-                                                <p class="text-primary"> {{$users->email}} </p>
+                                                <p class="text-primary"> {{$datas->email}} </p>
                                             </div>
                                             <div class="form-group">
                                                 <label>Alamat</label>
-                                                <p class="text-primary"> {{$users->alamat}}   
+                                                <p class="text-primary"> {{$datas->alamat}}   
                                                 </p>
                                             </div>
                                             <div class="form-group">
                                                 <label>Kontak</label>
-                                                <p class="text-primary"> {{$users->kontak}} </p>
+                                                <p class="text-primary"> {{$datas->kontak}} </p>
                                             </div>
                                         </div>
                                         <!-- <div class="col-sm-10 col-sm-offset-1"> -->

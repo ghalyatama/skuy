@@ -114,7 +114,8 @@ The above copyright notice and this permission notice shall be included in all c
                 <div class="card-header" id="prof">
                   <h5> {{ $tampils->nama }}</h5>
                     <p>
-                      <a href="{{ url('developerprofile') }}">
+                      <a href ="{{ route('this.developer', $tampils->id) }}" method="get">
+                              @csrf
                         <small>{{ $tampils->nama_user }}</smalll>
                       </a>
                     </p>

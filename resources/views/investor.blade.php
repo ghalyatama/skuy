@@ -74,7 +74,7 @@
 
                                 <div class="wizard-header">
                                     <h3>
-                                    Otto's Profile <br>
+                                    {{ $datas->name }}'s Profile <br>
                                     </h3>
                                 </div>
 
@@ -99,11 +99,11 @@
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>Perusahaan:</label>
-                                                <p class="text-primary"> SkuyComps </p>
+                                                <p class="text-primary"> {{ $datas->company_name }} </p>
                                             </div>
                                             <div class="form-group">
                                                 <label>Nama         :</label>
-                                                <p class="text-primary"> Otto Iskandar </p>
+                                                <p class="text-primary"> {{ $datas->name }} </p>
                                             </div>
                                             <div class="form-group">
                                                 <label>Posisi       :<small>(developer/investor)</small></label>
@@ -111,15 +111,15 @@
                                             </div>
                                             <div class="form-group">
                                                 <label>Email        :</label>
-                                                <p class="text-primary"> otto.ottong@gmail.com </p>
+                                                <p class="text-primary"> {{ $datas->email }} </p>
                                             </div>
                                             <div class="form-group">
                                                 <label>Alamat       :</label>
-                                                <p class="text-primary"> diatas langit bawah bumi </p>
+                                                <p class="text-primary"> {{ $datas->alamat }} </p>
                                             </div>
                                             <div class="form-group">
                                                 <label>Kontak       :</label>
-                                                <p class="text-primary"> 0822 -2222 -2222 </p>
+                                                <p class="text-primary"> {{ $datas->kontak }} </p>
                                             </div>
                                         </div>
                                         <!-- <div class="col-sm-10 col-sm-offset-1"> -->

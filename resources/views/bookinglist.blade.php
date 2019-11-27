@@ -228,7 +228,9 @@ The above copyright notice and this permission notice shall be included in all c
                           <th scope="row">1</th>
                           <td><p class="text-truncate" style="max-width: 250px;">{{$dt->nama_ide}}</p></td>
                           <td> 
-                            <a href="/investor">{{$dt->nama_investor}}</a>
+                            <a href ="{{ route('this.investor', $dt->id) }}" method="get">
+                              @csrf
+                            {{$dt->nama_investor}}</a>
                           </td>
                         </tr>
                 @endforeach
