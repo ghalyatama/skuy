@@ -52,6 +52,10 @@ Route::get('/editide', function () {
     return view('editide');
 });
 
+Route::get('/detailide', function () {
+    return view('detailide');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -60,9 +64,19 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/profile','ProfileController@show')->name('profile');
 Route::post('/developer', 'ProfileController@update')->name('developer.update');
 Route::get('/developer','ProfileController@show')->name('profil');
+Route::get('/profileinvestor','ProfileController@show')->name('profilinvest');
+Route::get('/editinvestor', 'ProfileController@showperid')->name('show.investor');
+Route::post('/editinvestor', 'ProfileController@updateinvestor')->name('investor.update');
 
 //Routing untuk ide
 Route::post('/createide', 'IdeController@store')->name('store.ide');
 Route::get('/dashboard','IdeController@showperakun')->name('ide.akun');
-Route::post('/editide', 'IdeController@update')->name('update.ide');
-Route::delete('/hapuside/{id}/delete', 'IdeController@hapus')->name('delete.ide');
+Route::delete('/dashboard/{id}/delete', 'IdeController@hapus')->name('delete.ide');
+Route::get('/editide/{id}','IdeController@showperid')->name('ide.id');
+Route::post('/editide/{id}', 'IdeController@update')->name('update.ide');
+Route::get('/','IdeController@showall')->name('homepage');
+Route::get('/dashboard/{id}/modal','IdeController@showmodal')->name('modal');
+Route::get('/detailide/{id}','IdeController@showperdetail')->name('detail.ide');
+
+//Routing untuk booking
+Route::post('/profileinvestor/{id}', 'BookingController@booking')->name('booked');

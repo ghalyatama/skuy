@@ -16,10 +16,12 @@ class CreateIdesTable extends Migration
         Schema::create('ides', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nama');
+            $table->string('category');
             $table->text('Deskripsi')->nullable();
             $table->text('image')->nullable();
             $table->string('status_id')->nullable();
             $table->unsignedBigInteger('user_id')->unsigned();
+            $table->string('nama_user');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });

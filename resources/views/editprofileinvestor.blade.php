@@ -69,7 +69,8 @@
                     <div class="wizard-container">
 
                         <div class="card wizard-card" data-color="orange" id="wizardProfile">
-                            <form action="" method="">
+                        <form method="post" action="{{ route('investor.update') }}" enctype="multipart/form-data">
+                                @csrf
                         <!--        You can switch ' data-color="orange" '  with one of the next bright colors: "blue", "green", "orange", "red"          -->
 
                                 <div class="wizard-header">
@@ -93,19 +94,19 @@
                                         <div class="col-sm-4 col-sm-offset-1">
                                             <div class="picture-container">
                                                 <div class="picture">
-                                                    <img src="img/default-avatar.png" class="picture-src" id="" title=""/>
+                                                    <img src="{{ asset('img/profile/'.$users->image)  }}" class="picture-src" id="" title=""/>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <div class="col-sm-12">
-                                                  <input type="text" class="form-control" id="" placeholder="Perusahaan" value="SkuyComps">
+                                                  <input type="text" name = "company_name" class="form-control" id="" placeholder="Perusahaan" value="{{ $users->company_name }}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="col-sm-12">
-                                                  <input type="text" class="form-control" id="" placeholder="Nama" value="Otto Iskandar">
+                                                  <input type="text" name = "name" class="form-control" id="" placeholder="Nama" value="{{ $users->name }}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
@@ -115,23 +116,23 @@
                                             </div>
                                             <div class="form-group">
                                                 <div class="col-sm-12">
-                                                  <input type="email" class="form-control" id="" placeholder="Email" value="otto.ottong@gmail.com" readonly>
+                                                  <input type="email" name = "email" class="form-control" id="" placeholder="Email" value="{{ $users->email }}" readonly>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="col-sm-12">
-                                                  <input type="text" class="form-control" id="" placeholder="Alamat">
+                                                  <input name = "alamat" type="text" class="form-control" id="" placeholder="Alamat" value="{{ $users->alamat }}">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class="col-sm-12">
-                                                  <input type="text" class="form-control" id="" placeholder="Kontak">
+                                                  <input name = "kontak" type="text" class="form-control" id="" placeholder="Kontak" value="{{ $users->kontak }}">
                                                 </div>
                                             </div>
 
                                             <div class="form-group">
                                             <div class="col-sm-12">
-                                                <input name="_method" type="hidden" value="post">                    
+                                                <input name="image" type="hidden" value="post">                    
                                                     <div class="row">
                                                         <div class="input-field col s6">
                                                             <input type="file" id="inputgambar" name="image" class="validate"/ >
@@ -150,10 +151,11 @@
                                 <div class="wizard-footer height-wizard">
                                     <div class="pull-right">
                                         <div class="update ml-auto mr-auto">
-                                            <a href="{{ route('profile') }}" class="btn btn-fill btn-round btn-warning" role="button">
-                                                Update Profile
-                                              <!-- <button type="submit" value="Save" class="btn btn-fill btn-warning btn-round">Update Profile</button> -->
-                                            </a>
+                                            <!-- <a href="{{ route('profile') }}"> -->
+                                             <!-- type="submit" value="Save" class="btn btn-fill btn-round btn-warning" role="button">
+                                                Update Profile -->
+                                              <button type="submit" value="Save" class="btn btn-fill btn-warning btn-round">Update Profile</button>
+                                            <!-- </a>  -->
 
                                             <a href="{{ route('profile') }}" class="btn btn-round btn-warning" role="button">
                                                 Cancel

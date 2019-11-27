@@ -88,27 +88,27 @@
       <div class="row">
         <div class="col-md-12">
           <div class="card card-outline card-info">
-          <form method="post" action="{{ route('store.ide') }}" enctype="multipart/form-data">
+          <form method="post" action="{{ route('update.ide', $tampils->id) }}" enctype="multipart/form-data">
                     @csrf
               <div class="form-group">
                 <div class="card-header">
                   <h3>Create your ide! </h3>
                   <small class="form-text text-muted">Put your title here!</small>
-                  <input type="subject" class="form-control" placeholder="Title" value="IDE 1">
+                  <input type="subject" name ="nama" class="form-control" placeholder="Title" value="{{ $tampils->nama }}">
                   <small class="form-text text-muted">Category : web/mobile/iot</small>  
-                  <input type="subject" class="form-control form-control-sm" placeholder="Category" value="Web">
+                  <input type="subject" name = "category" class="form-control form-control-sm" placeholder="Category" value="Web">
                   
                 </div>
                   
                 <div class="card-body pad">
                 <small class="form-text text-muted">Description: </small>
                   <div class="mb-3">
-                    <textarea name="Deskripsi" class="textarea" placeholder="Place some text here"
-                              style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                    <textarea name="Deskripsi" class="textarea" 
+                              style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"><?php echo "$tampils->Deskripsi";?></textarea>
                   </div>
                 
                   <small class="form-text text-muted">it's your product foto (700x400)px </small>
-                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                  <input type="file" name="image" class="form-control-file" id="exampleFormControlFile1">
                  
                 </div>
                 <div class="card-footer">

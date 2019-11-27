@@ -96,7 +96,7 @@
                   <small class="form-text text-muted">Put your title here!</small>
                   <input type="subject" name="nama" class="form-control" placeholder="Title">
                   <small class="form-text text-muted">Category : web/mobile/iot</small>  
-                  <input type="subject" class="form-control form-control-sm" placeholder="Category">
+                  <input type="subject" name="category" class="form-control form-control-sm" placeholder="Category">
                   
                 </div>
                   
@@ -105,7 +105,7 @@
                   <div class="mb-3">
                     <textarea name="Deskripsi" class="textarea" placeholder="Place some text here"
                               style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
-                                <p></p>
+                          
                               </textarea>
                   </div>
                 
