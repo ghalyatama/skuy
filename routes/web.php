@@ -48,6 +48,10 @@ Route::get('/developerprofile', function () {
     return view('developerprofile');
 });
 
+Route::get('/editide', function () {
+    return view('editide');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

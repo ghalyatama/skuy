@@ -55,6 +55,9 @@
                                     <a  class="dropdown-header" href="{{ route('profile') }}">
                                          {{ __('Profile') }} 
                                     </a>
+                                    <a  class="dropdown-header" href="{{ url('/dashboard') }}">
+                                         {{ __('Dashboard') }} 
+                                    </a>
                                 </div>
                                 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -85,25 +88,31 @@
       <div class="row">
         <div class="col-md-12">
           <div class="card card-outline card-info">
-          <form>
+          <form method="post" action="{{ route('store.ide') }}" enctype="multipart/form-data">
+                    @csrf
               <div class="form-group">
                 <div class="card-header">
                   <h3>Create your ide! </h3>
+                  <small class="form-text text-muted">Put your title here!</small>
                   <input type="subject" class="form-control" placeholder="Title" value="IDE 1">
-                  <small class="form-text text-muted">put your title here!</small>
+                  <small class="form-text text-muted">Category : web/mobile/iot</small>  
+                  <input type="subject" class="form-control form-control-sm" placeholder="Category" value="Web">
+                  
                 </div>
                   
                 <div class="card-body pad">
+                <small class="form-text text-muted">Description: </small>
                   <div class="mb-3">
-                    <textarea class="textarea" placeholder="Place some text here"
+                    <textarea name="Deskripsi" class="textarea" placeholder="Place some text here"
                               style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
                   </div>
                 
-                  <label for="exampleFormControlFile1">input product photo</label>
+                  <small class="form-text text-muted">it's your product foto (700x400)px </small>
                   <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                 
                 </div>
                 <div class="card-footer">
-                  <button type="submit" class="btn btn-warning btn-block">Submit</button>
+                  <button type="submit" value="Save" class="btn btn-warning btn-block">Submit</button>
                 </div>
               </div>
             </form>

@@ -154,7 +154,7 @@ The above copyright notice and this permission notice shall be included in all c
       </a>
 
         <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-6">
+          
         @foreach($show as $sh)
         <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card card-stats" >
@@ -162,18 +162,18 @@ The above copyright notice and this permission notice shall be included in all c
                 <div class="row">
                   <div class="col-5 col-md-4">
                     <div class="icon-big text-center icon-warning">
-                      <img src="img/image.png" class="rounded">
+                      <img src="{{ asset('img/ide/'.$sh->image) }}" class="rounded">
                     </div>
                   </div>
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">Web</p>
-                      <p class="card-title">{{ $sh->nama }}
+                      <p class="card-title text-truncate" style="max-width: 150px;">{{ $sh->nama }}</p>
                     </div>
                     
                   </div>
                   <div class="col-7 col-md-12">
-                     <p class="card-text text-truncate" style="max-width: 150px;">sjhaskjahskjhasjkdhkjasjhvahsxhjasvxhaskxakjshxjabsxbbashsaj </p>
+                     <p class="card-text text-truncate" style="max-width: 150px;">{{ $sh->Deskripsi}} </p>
                   </div>
                 </div>
               </div>
@@ -187,94 +187,8 @@ The above copyright notice and this permission notice shall be included in all c
                     </a>  
               </div>
             </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="card card-stats">
-              <div class="card-body ">
-                <div class="row">
-                  <div class="col-5 col-md-4">
-                    <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-money-coins text-success"></i>
-                    </div>
-                  </div>
-                  <div class="col-7 col-md-8">
-                    <div class="numbers">
-                      <p class="card-category">Mobile</p>
-                      <p class="card-title"> IDE 2</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer ">
-                <hr>
-                    <a href="{{ url('/createide') }}">
-                      <i class="fa fa-refresh"></i> Edit
-                    </a>
-                    <a href="{{ url('/createide') }}">
-                      <i class="fa fa-trash"></i> Delete
-                    </a>  
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="card card-stats">
-              <div class="card-body ">
-                <div class="row">
-                  <div class="col-5 col-md-4">
-                    <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-vector text-danger"></i>
-                    </div>
-                  </div>
-                  <div class="col-7 col-md-8">
-                    <div class="numbers">
-                      <p class="card-category">Protoype</p>
-                      <p class="card-title"> IDE 3
-                        <p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer ">
-                <hr>
-                    <a href="{{ url('/createide') }}">
-                      <i class="fa fa-refresh"></i> Edit
-                    </a>
-                    <a href="{{ url('/createide') }}">
-                      <i class="fa fa-trash"></i> Delete
-                    </a>  
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="card card-stats">
-              <div class="card-body ">
-                <div class="row">
-                  <div class="col-5 col-md-4">
-                    <div class="icon-big text-center icon-warning">
-                      <i class="nc-icon nc-favourite-28 text-primary"></i>
-                    </div>
-                  </div>
-                  <div class="col-7 col-md-8">
-                    <div class="numbers">
-                      <p class="card-category">Web</p>
-                      <p class="card-title">IDE 4
-                        <p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="card-footer ">
-                <hr>
-                    <a href="{{ url('/createide') }}">
-                      <i class="fa fa-refresh"></i> Edit
-                    </a>
-                    <a href="{{ url('/createide') }}">
-                      <i class="fa fa-trash"></i> Delete
-                    </a>  
-              </div>
-            </div>
-          </div>
-          @endforeach
+          </div>          
+        @endforeach
         </div>
       </div>
       
