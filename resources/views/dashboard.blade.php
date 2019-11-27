@@ -155,6 +155,8 @@ The above copyright notice and this permission notice shall be included in all c
 
         <div class="row">
           <div class="col-lg-3 col-md-6 col-sm-6">
+        @foreach($show as $sh)
+        <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="card card-stats" >
               <div class="card-body ">
                 <div class="row">
@@ -166,7 +168,7 @@ The above copyright notice and this permission notice shall be included in all c
                   <div class="col-7 col-md-8">
                     <div class="numbers">
                       <p class="card-category">Web</p>
-                      <p class="card-title">IDE 1</p>
+                      <p class="card-title">{{ $sh->nama }}
                     </div>
                     
                   </div>
@@ -272,6 +274,7 @@ The above copyright notice and this permission notice shall be included in all c
               </div>
             </div>
           </div>
+          @endforeach
         </div>
       </div>
       
