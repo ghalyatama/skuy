@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 use Auth;
 
 
@@ -14,6 +15,14 @@ class ProfileController extends Controller
     public function index(){
     	
     	return view('profile');
+    }
+
+    //untuk menampilkan investor di page edit
+    public function showperid()
+    {   
+        $users = Auth::user();
+        return view('editprofileinvestor', compact('users'));
+        
     }
 
     public function show(Request $users)
@@ -48,5 +57,29 @@ class ProfileController extends Controller
            // dd($users);
            $users->update();
             return redirect('/developer')->with('alert-success','Data berhasil diubah!');
+        }
+
+        public function updateinvestor(Request $request)
+        {
+            $users = Auth::user();
+            $users->company_name = $request->get('company_name');
+            $users->name = $request->get('name');
+            $users->kontak = $request->get('kontak');
+            $users->email = $request->get('email');
+            $users->alamat = $request->get('alamat');
+            if($request->file('image') == "")
+        {
+            $users->image = $users->image;
+        } 
+        else
+        {
+            $file       = $request->file('image');
+            $fileName   = $file->getClientOriginalName();
+            $request->file('image')->move("img/profile/", $fileName);
+            $users->image = $fileName;
+        }
+           // dd($users);
+           $users->update();
+            return redirect('/profileinvestor')->with('alert-success','Data berhasil diubah!');
         }
 }

@@ -90,16 +90,16 @@
                                         <div class="col-sm-4 col-sm-offset-1">
                                             <div class="picture-container">
                                                 <div class="picture">
-                                                    <img src="img/default-avatar.png" class="picture-src" id="wizardPicturePreview" title=""/>
-                                                    <input type="file" id="wizard-picture">
+                                                    <img src="{{ asset('img/profile/'.$users->image)  }}" class="picture-src" id="wizardPicturePreview" title=""/>
+                                                   
                                                 </div>
-                                                <h6>Choose Picture</h6>
+                                                
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-group">
                                                 <label>Perusahaan:</label>
-                                                <p class="text-primary"> {{$users->perusahaan}} </p>
+                                                <p class="text-primary"> {{$users->company_name}} </p>
                                             </div>
                                             <div class="form-group">
                                                 <label>Nama         :</label>
@@ -130,7 +130,8 @@
                                 </div>
                                 <div class="wizard-footer height-wizard">
                                     <div class="pull-right">
-                                        <a href="{{url ('/editprofileinvestor')}}"> 
+                                        <a href="{{ route('show.investor') }}" method="post"> 
+                                            @csrf
                                             <input type='button' class='btn btn-finish btn-fill btn-warning btn-wd btn-sm' name='edit profile' value='Edit Profile' />
                                         </a>
                                     </div>

@@ -179,12 +179,16 @@ The above copyright notice and this permission notice shall be included in all c
               </div>
               <div class="card-footer ">
                 <hr>
-                    <a href="{{ url('/createide') }}">
+                    <a href="{{ route('ide.id', $sh->id) }}" method="post">
+                      @csrf
                       <i class="fa fa-refresh"></i> Edit
                     </a>
-                    <a href="{{ url('/createide') }}">
-                      <i class="fa fa-trash"></i> Delete
-                    </a>  
+                    <form action="{{route('delete.ide', $sh->id)}}" method="post">
+                                @csrf
+                                @method('DELETE')
+                              <input name="_method" type="hidden" value="DELETE">
+                                <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Delete</button>
+                    </form>
               </div>
             </div>
           </div>          

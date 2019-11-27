@@ -31,13 +31,38 @@ class IdeController extends Controller
         
     }
 
+    //untuk menampilkan ide per ide di edit ide
+    public function showperid(Request $request, $id)
+    {   
+        $tampils = DB::table('ides')->where('id', $id)->first();
+        return view('editide', compact('tampils'));
+        
+    }
+
+    public function showperdetail(Request $request, $id)
+    {   
+        $tampils = DB::table('ides')->where('id', $id)->first();
+        return view('detailide', compact('tampils'));
+        
+    }
+
+    //untuk menampilkan ide per ide di edit ide
+    public function showmodal(Request $request, $id)
+    {   
+        $tampils = DB::table('ides')->where('id', $id)->first();
+        return view('welcome', compact('tampils'));
+        
+    }
+
     //untuk men-create ide 
     public function store(Request $request)
     {   
         $users = Auth::user();
         $tambah = new Ide();
         $tambah->user_id = $users['id'];
+        $tambah->nama_user = $users['name'];
         $tambah->nama = $request['nama'];
+        $tambah->category = $request['category'];
         $tambah->Deskripsi = $request['Deskripsi'];
         $tambah->status_id = 1;
         $file       = $request->file('image');
@@ -54,11 +79,12 @@ class IdeController extends Controller
     {   
         $edit = \App\Ide::find($id);
         $edit->nama = $request->get('nama');
+        $edit->category = $request->get('category');
         $edit->Deskripsi = $request->get('Deskripsi');
         
         if($request->file('image') == "")
         {
-            $users->image = $users->image;
+            $edit->image = $edit->image;
         } 
         else
         {
@@ -73,7 +99,7 @@ class IdeController extends Controller
     }
 
     //untuk men-delete ide
-    public function hapus()
+    public function hapus($id)
     {   
         $hapus = \App\Ide::find($id);
         $hapus->delete();

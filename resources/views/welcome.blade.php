@@ -150,66 +150,29 @@
         <div class="section section-about-us">
             <div class="container">
             <div class="row">
-
-              <div class="col-lg-4 col-md-6 mb-4">
+        @foreach($tampils as $tm)
+              <div class="col-lg-4 col-md-6mb-4">
                 <div class="card h-100">
-                  <a href="#"><img class="card-img-top" src="img/idenation.png" alt="" ></a>
+                  <a href="#"><img class="card-img-top" src="{{ asset('img/ide/'.$tm->image)  }}" alt="" style="max-height: 200px;" ></a>
                   <div class="card-body">
                     <h4 class="card-title">
-                      <a class="category text-primary" href="#">Judul Ide</a>
+                      <a class="category text-primary" href="#">{{ $tm->nama }}</a>
                     </h4>
-                    <p class="card-text text-truncate " style="max-width: 200px;">
-                    Banyak ide kreatif aplikasi yang berguna di cetuskan, bahkan tidak 
-                    hanya dari para founder perusahaan-perusahaan ternama. Kebanyakan 
-                    dari mereka yang memiliki ide kreatif tidak bisa merealisasikan idenya 
-                    karena masalah dana atau financial. 
-                    </p>
+                    <p class="card-text text-truncate " style="max-width: 200px;">{{ $tm->Deskripsi }}</p>
                   </div>
+                  
                   <div class="card-footer">
                     <!-- Button trigger modal -->
                       <div class="pull-right">
-                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModalScrollable">
-                          See more...
-                        </button> 
-                      </div>
-
-                      <!-- Modal -->
-                      <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-scrollable" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalScrollableTitle">Idenation</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                                <img class="card-img-top" src="img/idenation.png" alt="" >
-                                <p>
-                                Banyak ide kreatif aplikasi yang berguna di cetuskan, bahkan tidak 
-                                hanya dari para founder perusahaan-perusahaan ternama. Kebanyakan 
-                                dari mereka yang memiliki ide kreatif tidak bisa merealisasikan idenya 
-                                karena masalah dana atau financial.
-                                </p> 
-                            </div>
-                            <div class="modal-footer">
-                              <div class="pull-left">  
-                                  <a class="btn btn-link" href="/developerprofile" role="button">
-                                      <p class="text-truncate" style="max-width:150px;">Ghalyatama Ikrm Fauzi</p>
-                                  </a>
-                              </div>  
-                              <div class="pull-right">
-                                <button type="button" class="btn btn-primary">Send Mail</button>
-                                <button type="button" class="btn btn-primary">Booking</button>
-                              </div>
-
-                            </div>
-                          </div>
-                        </div>
+                        <a href= "{{ route('detail.ide', $tm->id) }}" method="post" role="button" class="btn btn-link">
+                            @csrf
+                            See more...
+                        </a> 
                       </div>
                   </div>
                 </div>
               </div>
+        @endforeach
 
 
 
@@ -357,6 +320,7 @@
             }
             }
       </script>
+    
 
     </body>
 </html>
