@@ -150,7 +150,7 @@
         <div class="section section-about-us">
             <div class="container">
             <div class="row">
-        @foreach($tampils as $tm))
+        @foreach($tampils as $tm)
               <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card h-100">
                   <a href="#"><img class="card-img-top" src="{{ asset('img/ide/'.$tm->image)  }}" alt="" ></a>

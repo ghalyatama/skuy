@@ -24,9 +24,9 @@ Route::get('/developer', function () {
     return view('developer');
 });
 
-Route::get('/booking', function () {
-    return view('bookinglist');
-});
+// Route::get('/booking', function () {
+//     return view('bookinglist');
+// });
 
 Route::get('/createide', function () {
     return view('createide');
@@ -79,4 +79,7 @@ Route::get('/dashboard/{id}/modal','IdeController@showmodal')->name('modal');
 Route::get('/detailide/{id}','IdeController@showperdetail')->name('detail.ide');
 
 //Routing untuk booking
-Route::post('/profileinvestor/{id}', 'BookingController@booking')->name('booked');
+Route::get('/home/{id}', 'BookingController@booking')->name('booked');
+Route::get('/bookinglist', 'BookingController@show')->name('booking');
+Route::get('/bookinglist/{id}', 'BookingController@accept')->name('accepted');
+Route::delete('/bookinglist/{id}/delete', 'BookingController@ignore')->name('ignored');
