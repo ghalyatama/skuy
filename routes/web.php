@@ -68,7 +68,8 @@ Route::get('/profileinvestor','ProfileController@show')->name('profilinvest');
 Route::get('/editinvestor', 'ProfileController@showperid')->name('show.investor');
 Route::post('/editinvestor', 'ProfileController@updateinvestor')->name('investor.update');
 Route::get('/investor/{id}', 'ProfileController@tampilaninvestor')->name('this.investor');
-Route::get('/profiledeveloper/{id}', 'ProfileController@tampilandeveloper')->name('this.developer');
+Route::get('/developerprofile/{id}', 'ProfileController@tampilandeveloper')->name('this.developer');
+// Route::get('/developerprofile/{id}', 'ProfileController@tampilandeveloper2')->name('this.developer2');
 
 //Routing untuk ide
 Route::post('/createide', 'IdeController@store')->name('store.ide');

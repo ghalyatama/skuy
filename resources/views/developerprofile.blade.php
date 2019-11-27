@@ -123,7 +123,7 @@ The above copyright notice and this permission notice shall be included in all c
                 <div class="card-body">
                   <div class="author">
                     <a href="#">
-                    <img src="img/user.png" style="max-height:200px;max-width:200px;margin-top:10px;">
+                    <img src="{{ asset('img/profile/'.$datas->image)  }}" style="max-height:200px;max-width:200px;margin-top:10px;">
                       <h5 class="title"></h5>
                     </a>
                   </div>
@@ -132,23 +132,23 @@ The above copyright notice and this permission notice shall be included in all c
                 <div class="card-body">
                                             <div class="form-group">
                                                 <label>Nama         :</label>
-                                                <h5 class="text-warning"> Otto Iskandar </h5>
+                                                <h5 class="text-warning"> {{$datas->name}} </h5>
                                             </div>
                                             <div class="form-group">
-                                                <label>Skill       :</label>
-                                                <h5 class="text-warning"> HTML, CSS, PHP, Javascript</h5>
+                                                <label>Position      : <small>(developer/investor)</small></label>
+                                                <h5 class="text-warning"> Developer</h5>
                                             </div>
                                             <div class="form-group">
                                                 <label>Email        :</label>
-                                                <h5 class="text-warning"> otto.ottong@gmail.com </h5>
+                                                <h5 class="text-warning"> {{$datas->email}} </h5>
                                             </div>
                                             <div class="form-group">
                                                 <label>Alamat       :</label>
-                                                <h5 class="text-warning"> diatas langit bawah bumi </h5>
+                                                <h5 class="text-warning"> {{$datas->alamat}} </h5>
                                             </div>
                                             <div class="form-group">
                                                 <label>Kontak       :</label>
-                                                <h5 class="text-warning"> 0822 -2222 -2222 </h5>
+                                                <h5 class="text-warning"> {{$datas->kontak}} </h5>
                                             </div>
                                             <div class="form-group">
                                                 <div class="float-right">
@@ -162,6 +162,7 @@ The above copyright notice and this permission notice shall be included in all c
                         <div class="card-title h5" id="ide"> 
                             <strong>Idea Work</strong> 
                         </div>
+                @foreach($ide as $id)
                   <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-6">
                       <div class="card card-stats" >
@@ -169,32 +170,33 @@ The above copyright notice and this permission notice shall be included in all c
                           <div class="row">
                             <div class="col-5 col-md-4">
                               <div class="icon-big text-center icon-warning">
-                                <img src="img/image.png" class="rounded">
+                                <img src="{{ asset('img/ide/'.$id->image) }}" class="rounded">
                               </div>
                             </div>
                             <div class="col-7 col-md-8">
                               <div class="numbers">
-                                <p class="card-category">Web</p>
-                                <p class="card-title">IDE 1</p>
+                                <p class="card-category">{{$id->category}}</p>
+                                <p class="card-title">{{$id->nama}}</p>
                               </div>
                               
                             </div>
                             <div class="col-7 col-md-12">
-                              <p class="card-text text-truncate" style="max-width: 150px;">sjhaskjahskjhasjkdhkjasjhvahsxhjasvxhaskxakjshxjabsxbbashsaj </p>
+                              <p class="card-text text-truncate" style="max-width: 150px;">{{$id->Deskripsi}}</p>
                             </div>
                           </div>
                         </div>
                         <div class="card-footer ">
                           <hr>
-                              <a href="#">
-                                  Check This
-                              </a> 
+                          <a href= "{{ route('detail.ide', $id->id) }}" method="post" role="button" class="btn btn-link">
+                            @csrf
+                            Check This 
+                        </a> 
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>                                             
-               
+               @endforeach
               </div>
             </div>
           

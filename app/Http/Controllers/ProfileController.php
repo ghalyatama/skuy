@@ -38,10 +38,20 @@ class ProfileController extends Controller
     {   
         $nama = \App\Ide::find($id);
         $datas = DB::table('users')->where('name', $nama['nama_user'])->first();
-        //dd($datas);
-        return view('profiledeveloper', compact('datas'));
+        $ide   = DB::table('ides')->where('user_id', $nama['user_id'])->get();
+        // dd($ide);
+        return view('developerprofile', compact('datas', 'ide'));
         
     }
+
+    // public function tampilandeveloper2(Request $request, $id)
+    // {   
+    //     $nama = \App\Ide::find($id);
+    //     $dataa = DB::table('ides')->where('user_id', $nama['user_id'])->get();
+    //     //dd($dataa);
+    //     return view('developerprofile', compact('dataa'));
+        
+    // }
 
     public function show(Request $users)
     {   
