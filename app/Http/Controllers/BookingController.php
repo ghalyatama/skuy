@@ -21,20 +21,40 @@ class BookingController extends Controller
         $invest = Auth::user();
         $develope = \App\Ide::find($id);
         $tambah = new Booking();
-        $tambah->develope_id = $id;
-        $tambah->invest_id = $invest['id'];
-        $tambah->nama_ide = $develope['nama_ide'];
+        $tambah->developer_id = $develope['user_id'];
+        $tambah->investor_id = $invest['id'];
+        $tambah->nama_ide = $develope['nama'];
+        $tambah->nama_developer = $develope['nama_user'];
+        $tambah->nama_investor = $invest['name'];
         $tambah->save();
-        return redirect()->to('/profileinvestor');
+        return redirect()->to('/');
         
         
     }
 
-    //untuk menampilkan ide per ide di edit ide
-    public function showperid(Request $request, $id)
+    public function show()
     {   
-        $tampils = DB::table('ides')->where('id', $id)->first();
-        return view('editide', compact('tampils'));
+        $tampil = Auth::user();
+        $datas = DB::table('bookings')->where('developer_id', $tampil['id'])->where('status', null)->get();
+        $dataa = DB::table('bookings')->where('developer_id', $tampil['id'])->where('status','accept')->get();
+        return view('bookinglist', compact('datas', 'dataa'));
         
+    }
+
+    public function accept(Request $request, $id)
+    {   
+        $idea = \App\Booking::find($id);
+        $idea->status = 'accept';
+        $idea->save();
+        return redirect()->to('/bookinglist');
+        
+    }
+
+    public function ignore($id)
+    {   
+        $hapus = \App\Booking::find($id);
+        $hapus->delete();
+        return redirect('bookinglist')->with('success','Data buku telah di hapus');
+            
     }
 }

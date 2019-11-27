@@ -66,7 +66,7 @@ The above copyright notice and this permission notice shall be included in all c
             </a>
           </li>
           <li>
-            <a href="{{ url('/booking') }}">
+            <a href="{{ route('booking') }}">
               <i class="nc-icon nc-tile-56"></i>
               <p>Booking List</p>
             </a>
@@ -167,7 +167,7 @@ The above copyright notice and this permission notice shall be included in all c
                   </div>
                   <div class="col-7 col-md-8">
                     <div class="numbers">
-                      <p class="card-category">Web</p>
+                      <p class="card-category">{{$sh->category}}</p>
                       <p class="card-title text-truncate" style="max-width: 150px;">{{ $sh->nama }}</p>
                     </div>
                     

@@ -71,12 +71,7 @@ The above copyright notice and this permission notice shall be included in all c
               <p>Booking List</p>
             </a>
           </li>
-          <!-- <li>
-            <a href="{{ url('/ide') }">
-              <i class="nc-icon nc-caps-small"></i>
-              <p>Posting Ide</p>
-            </a>
-          </li> -->
+          
         </ul>
       </div>
     </div>
@@ -169,17 +164,32 @@ The above copyright notice and this permission notice shall be included in all c
                       </tr>
                     </thead>
                     <tbody>
+                    @php(
+                    $no = 1 {{-- buat nomor urut --}}
+                    )
+                {{-- loop all data --}}
+                @foreach ($datas as $data)
                         <tr>
-                          <th scope="row">1</th>
-                          <td><p class="text-truncate" style="max-width: 250px;">Aplikasi  Pembelajaran Bocil Tik-Tok</p></td>
+                          <th scope="row">{{$no++}}</th>
+                          <td><p class="text-truncate" style="max-width: 250px;">{{$data->nama_ide}}</p></td>
                           <td> 
-                            <a href="/investor">Otto Iskandar</a>
+                            <a href="/investor">{{$data->nama_investor}}</a>
                           </td>
                           <td>
-                            <a class="btn btn-warning" href="#" role="button">Accept</a>
-                            <a class="btn btn-warning" href="#" role="button">Ignore</a>
+                            <a class="btn btn-warning"href ="{{ route('accepted', $data->id) }}" method="get" role="button">Accept</a>
+                            <form action="{{route('ignored', $data->id)}}" method="post">
+                                @csrf
+                                @method('DELETE')
+                              <input name="_method" type="hidden" value="DELETE">
+                                <button class="btn btn-sm btn-danger" type="submit" onclick="return confirm('Yakin ingin menghapus data?')">Ignore</button>
+                             </form>
+                            <!-- <a class="btn btn-warning" href ="{{route('ignored', $data->id)}}" method="post" role="button">
+                             @csrf
+                              @method('DELETE')
+                            Ignore</a> -->
                           </td>
                         </tr>
+                @endforeach
                     </tbody>
                   </table>
                 </div>
@@ -209,13 +219,19 @@ The above copyright notice and this permission notice shall be included in all c
                       </tr>
                     </thead>
                     <tbody>
+                    @php(
+                    $no = 1 {{-- buat nomor urut --}}
+                    )
+                {{-- loop all data --}}
+                @foreach ($dataa as $dt)
                         <tr>
                           <th scope="row">1</th>
-                          <td><p class="text-truncate" style="max-width: 250px;">Aplikasi  Pembelajaran Bocil Tik-Tok</p></td>
+                          <td><p class="text-truncate" style="max-width: 250px;">{{$dt->nama_ide}}</p></td>
                           <td> 
-                            <a href="/investor">Otto Iskandar</a>
+                            <a href="/investor">{{$dt->nama_investor}}</a>
                           </td>
                         </tr>
+                @endforeach
                     </tbody>
                   </table>
                 </div>

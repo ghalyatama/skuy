@@ -16,6 +16,9 @@ class CreateBookingsTable extends Migration
         Schema::create('bookings', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nama_ide');
+            $table->string('nama_developer');
+            $table->string('nama_investor');
+            $table->string('status')->nullable();
             $table->unsignedBigInteger('developer_id')->unsigned();
             $table->unsignedBigInteger('investor_id')->unsigned();
             $table->timestamps();

@@ -66,7 +66,7 @@ The above copyright notice and this permission notice shall be included in all c
             </a>
           </li>
           <li>
-            <a href= "{{ url('/booking') }}">
+            <a href="{{ route('booking') }}">
               <i class="nc-icon nc-tile-56"></i>
               <p>Booking List</p>
             </a>

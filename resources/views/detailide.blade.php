@@ -112,10 +112,10 @@ The above copyright notice and this permission notice shall be included in all c
             <div class="col-md-8">
               <div class="card text-center">
                 <div class="card-header" id="prof">
-                  <h5> Judul Ide</h5>
+                  <h5> {{ $tampils->nama }}</h5>
                     <p>
                       <a href="{{ url('developerprofile') }}">
-                        <small>{{ $tampils->nama }}</smalll>
+                        <small>{{ $tampils->nama_user }}</smalll>
                       </a>
                     </p>
                   <hr>
@@ -140,7 +140,7 @@ The above copyright notice and this permission notice shall be included in all c
               <div class="container sepas">
         <div class="row justify-content-center">
           <a class="btn btn-warning" href="#"> Send Mail </a>
-          <a class="btn btn-warning" href ="{{ route('booked', $tampils->id) }}" method="post"> 
+          <a class="btn btn-warning" href ="{{ route('booked', $tampils->id) }}" method="get"> 
             @csrf 
           Booking </a>
         </div>
