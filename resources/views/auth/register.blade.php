@@ -10,17 +10,7 @@
                 
                 <div class="card-header text-center">
                   <h3 class="card-title title-up"><b>Sign Up</b></h3>
-                  <div class="social-line">
-                    <a href="#pablo" class="btn btn-neutral btn-facebook btn-icon btn-round">
-                      <i class="fab fa-facebook-square"></i>
-                    </a>
-                    <a href="#pablo" class="btn btn-neutral btn-twitter btn-icon btn-lg btn-round">
-                      <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="#pablo" class="btn btn-neutral btn-google btn-icon btn-round">
-                      <i class="fab fa-google-plus"></i>
-                    </a>
-                  </div>
+                  
                 </div>
                 
                 <div class="card-body">

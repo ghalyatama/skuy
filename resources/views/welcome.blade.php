@@ -153,13 +153,14 @@
         @foreach($tampils as $tm)
               <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card h-100">
-                  <a href="#"><img class="card-img-top" src="{{ asset('img/ide/'.$tm->image)  }}" alt="" ></a>
+                  <a href="#"><img class="card-img-top" src="{{ asset('img/ide/'.$tm->image)  }}" alt="" style="max-height: 200px;" ></a>
                   <div class="card-body">
                     <h4 class="card-title">
                       <a class="category text-primary" href="#">{{ $tm->nama }}</a>
                     </h4>
                     <p class="card-text text-truncate " style="max-width: 200px;">{{ $tm->Deskripsi }}</p>
                   </div>
+                  
                   <div class="card-footer">
                     <!-- Button trigger modal -->
                       <div class="pull-right">
@@ -167,36 +168,6 @@
                             @csrf
                             See more...
                         </a> 
-                      </div>
-        
-                      <!-- Modal -->
-                      <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-scrollable" role="document">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalScrollableTitle">{{ $tm->nama }}</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-                            <div class="modal-body">
-                                <img class="card-img-top" src="{{ asset('img/ide/'.$tm->image)  }}" alt="" >
-                                {{ $tm->Deskripsi }}
-                            </div>
-                            <div class="modal-footer">
-                              <div class="pull-left">  
-                                  <a class="btn btn-link" href="/developerprofile" role="button">
-                                      <p class="text-truncate" style="max-width:150px;">{{ $tm->nama_user }}</p>
-                                  </a>
-                              </div>  
-                              <div class="pull-right">
-                                <button type="button" class="btn btn-primary">Send Mail</button>
-                                <button type="button" class="btn btn-primary">Booking</button>
-                              </div>
-
-                            </div>
-                          </div>
-                        </div>
                       </div>
                   </div>
                 </div>

@@ -55,11 +55,14 @@
                                     <a  class="dropdown-header" href="{{ route('profile') }}">
                                          {{ __('Profile') }} 
                                     </a>
-                                    <a  class="dropdown-header" href="{{ url('/dashboard') }}">
+                                </div>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a  class="dropdown-item" href="{{ url('/dashboard') }}">
                                          {{ __('Dashboard') }} 
                                     </a>
                                 </div>
-                                
+
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
@@ -103,7 +106,7 @@
                 <div class="card-body pad">
                 <small class="form-text text-muted">Description: </small>
                   <div class="mb-3">
-                    <textarea name="Deskripsi" class="textarea" placeholder="Place some text here"
+                    <textarea name="Deskripsi" type="text" class="form-control textarea" placeholder="Place some text here"
                               style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;">
                           
                               </textarea>

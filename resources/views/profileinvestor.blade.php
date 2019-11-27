@@ -91,9 +91,9 @@
                                             <div class="picture-container">
                                                 <div class="picture">
                                                     <img src="{{ asset('img/profile/'.$users->image)  }}" class="picture-src" id="wizardPicturePreview" title=""/>
-                                                    <input type="file" id="wizard-picture">
+                                                   
                                                 </div>
-                                                <h6>Choose Picture</h6>
+                                                
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
