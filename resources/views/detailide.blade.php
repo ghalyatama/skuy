@@ -140,7 +140,7 @@ The above copyright notice and this permission notice shall be included in all c
               </div>
               <div class="container sepas">
         <div class="row justify-content-center">
-          <a class="btn btn-warning" href="#"> Send Mail </a>
+          <a class="btn btn-warning" href="{{ url('/oke', $tampils->nama) }}"> Send Mail </a>
           <a class="btn btn-warning" href ="{{ route('booked', $tampils->id) }}" method="get"> 
             @csrf 
           Booking </a>

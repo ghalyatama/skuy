@@ -86,3 +86,15 @@ Route::get('/home/{id}', 'BookingController@booking')->name('booked');
 Route::get('/bookinglist', 'BookingController@show')->name('booking');
 Route::get('/bookinglist/{id}', 'BookingController@accept')->name('accepted');
 Route::delete('/bookinglist/{id}/delete', 'BookingController@ignore')->name('ignored');
+
+
+Route::get('/oke/{name}', function(Request $request, $name){
+    $to_name = "$name";
+    $to_email = "risaintanka23@gmail.com";
+    $data = array("name" => "$name", "body" => "Booking!");
+    Mail::send('mail', $data, function ($message) use ($to_name, $to_email){
+        $message->to($to_email)
+        ->subject('An Investor has booked you!');
+    });
+    echo "mail has been sent!";
+});
